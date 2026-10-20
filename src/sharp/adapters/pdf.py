@@ -16,6 +16,8 @@ from reportlab.pdfgen.canvas import Canvas
 from sharp.career import digest
 from sharp.contracts import Artifact, Block, Line, Measurement, Style
 
+from .pdf_structure import TaggedContent
+
 
 def font_name(style: Style) -> str:
     variants = {
@@ -78,6 +80,14 @@ def _measure(serialized: str, width: float) -> Measurement:
     block = Block.model_validate_json(serialized)
     if width <= 0:
         raise ValueError(f"No usable width for {block.id}")
+    if (
+        block.style.marker
+        and pdfmetrics.stringWidth(block.style.marker, font_name(block.style), block.style.size)
+        > block.style.marker_offset
+    ):
+        raise ValueError(
+            f"List marker overlaps body text in {block.id}; increase marker_offset and indent"
+        )
     # Each character uses its effective range style; long words split safely.
     if not block.runs:
         font = font_name(block.style)
@@ -173,10 +183,26 @@ class PdfRenderer:
                 "Resume",
             )
         )
+        tags = TaggedContent()
         for number in range(1, layout.pages + 1):
             for placed in (p for p in layout.placed if p.page == number):
                 b, m = placed.block, placed.measurement
                 leading = m.height / len(m.lines)
+                label_tag, body_tag = tags.add(number - 1, b.kind, bool(b.style.marker))
+                if label_tag is not None:
+                    canvas.addLiteral(f"/Lbl <</MCID {label_tag}>> BDC")
+                    canvas.setFont(font_name(b.style), b.style.size)
+                    canvas.setFillColor(HexColor(b.style.color))
+                    marker_text = canvas.beginText(
+                        placed.x - b.style.marker_offset,
+                        page.height - placed.y - leading * 0.8,
+                    )
+                    marker_text.setFont(font_name(b.style), b.style.size)
+                    marker_text.textOut(b.style.marker)
+                    canvas.drawText(marker_text)
+                    canvas.addLiteral("EMC")
+                role, mcid = body_tag
+                canvas.addLiteral(f"/{role} <</MCID {mcid}>> BDC")
                 for i, line in enumerate(m.lines):
                     x = placed.x
                     baseline = page.height - placed.y - leading * i - leading * 0.8
@@ -188,6 +214,7 @@ class PdfRenderer:
                         text_obj.textOut(text)
                         canvas.drawText(text_obj)
                         x += pdfmetrics.stringWidth(text, name, style.size)
+                canvas.addLiteral("EMC")
                 if b.url:
                     canvas.linkURL(
                         b.url,
@@ -201,6 +228,7 @@ class PdfRenderer:
                     )
             canvas.showPage()
         canvas.save()
+        tags.attach(path)
         reader = PdfReader(path)
         if len(reader.pages) != layout.pages:
             raise ValueError("Exported page count differs from layout")
@@ -217,6 +245,7 @@ class PdfRenderer:
                 "pages": len(reader.pages),
                 "text": "passed",
                 "reading_order": "single-column content order",
+                "list_structure": "L/LI/Lbl/LBody",
             },
         )
 
@@ -228,10 +257,15 @@ class PdfRenderer:
                 f'<svg xmlns="http://www.w3.org/2000/svg" width="{settings.page.width}" height="{settings.page.height}" viewBox="0 0 {settings.page.width} {settings.page.height}"><rect width="100%" height="100%" fill="white"/>'
             ]
             for p in (p for p in layout.placed if p.page == number):
+                if p.block.style.marker:
+                    baseline = p.y + p.measurement.height / len(p.measurement.lines) * 0.8
+                    svg.append(
+                        f'<text x="{p.x - p.block.style.marker_offset}" y="{baseline}" font-family="sans-serif" font-size="{p.block.style.size}" fill="{p.block.style.color}">{escape(p.block.style.marker)}</text>'
+                    )
                 for i, line in enumerate(p.measurement.lines):
                     y = p.y + p.measurement.height / len(p.measurement.lines) * (i + 0.8)
                     svg.append(
-                        f'<text x="{p.x}" y="{y}" font-family="sans-serif" font-size="{p.block.style.size}" fill="{p.block.style.color}">{escape(line.text)}</text>'
+                        f'<text x="{p.x}" y="{y}" font-family="sans-serif" font-size="{p.block.style.size}" font-weight="{"bold" if p.block.style.bold else "normal"}" fill="{p.block.style.color}">{escape(line.text)}</text>'
                     )
             svg.append("</svg>")
             target = prefix.with_name(prefix.name + f"-{number}.svg")

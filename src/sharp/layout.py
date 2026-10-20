@@ -18,7 +18,7 @@ def _runs(block, runs, paint_only=False):
                 f"Unsupported {'after-layout ' if paint_only else ''}style on {block.id}"
             )
         Style.model_validate({**block.style.model_dump(), **run.style})
-        if set(run.style) & {"before", "after", "indent", "leading"}:
+        if set(run.style) & {"before", "after", "indent", "leading", "marker", "marker_offset"}:
             raise ValueError("Line spacing and indentation belong on blocks, not text ranges")
 
 

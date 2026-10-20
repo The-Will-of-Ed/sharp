@@ -54,11 +54,13 @@ MEANINGS = {
     "size": "Text size in points; contributes to measured dimensions.",
     "leading": "Line height in points; controls vertical space and readability.",
     "color": "Hex text color; a geometry-preserving decoration.",
-    "bold": "Explicit weight flag. False in every shipped style; never inferred from metrics.",
+    "bold": "Explicit weight flag. Shipped hierarchy bolds names, roles, headings and degree rows; bullet phrases require explicit ranges.",
     "italic": "Explicit slant flag. False in shipped styles.",
     "before": "Space before a block in points; measured before fitting.",
     "after": "Space after a block in points; included in keep-with-next calculations.",
-    "indent": "Left indentation in points; reduces available line width.",
+    "indent": "Body-text indentation in points; reduces available width and aligns wrapped list lines.",
+    "marker": "Optional list label text, separate from canonical career wording; empty disables the visible marker.",
+    "marker_offset": "Distance from body-text start back to marker start in points; must fit within indent and accommodate glyph width.",
     "start": "Inclusive Unicode code-point offset into snapshot text; not a UTF-16 or byte index.",
     "end": "Exclusive Unicode code-point offset; changes to text require range review.",
     "style": "Effective style or range patch; validate supported properties before applying.",
@@ -198,7 +200,8 @@ def main():
     (docs / "CONTRACTS.md").write_text("\n".join(rows), encoding="utf-8")
     (docs / "contracts.schema.json").write_text(json.dumps(schemas, indent=2), encoding="utf-8")
     (root / "settings.example.yaml").write_text(
-        yaml.safe_dump(Settings().model_dump(), sort_keys=False), encoding="utf-8"
+        yaml.safe_dump(Settings().model_dump(), sort_keys=False, allow_unicode=True),
+        encoding="utf-8",
     )
     (root / "src/sharp/defaults/contract.meanings.json").write_text(
         json.dumps(MEANINGS, indent=2), encoding="utf-8"

@@ -69,7 +69,9 @@ See [the visual architecture](docs/architecture.svg), [its PNG](docs/architectur
 ## What exists by default
 
 - One basic, single-column ATS-oriented layout with selectable text and actual link destinations.
-- No bold text, including the name, headings, and metrics. Hierarchy comes from size and spacing.
+- Bold name, target role, section/employer headings and education rows. Bullet text stays regular unless explicit text ranges request emphasis.
+- Charcoal body (#1A1A1A), orange section/role headings (#C44B12), and blue employer/project headings (#1F5A8A), all controlled by semantic styles.
+- Visible list markers with hanging indentation, plus PDF list structure tags. Marker text and geometry live in `styles.bullet`.
 - One-page output; choose one or two pages in settings.
 - Relevant work experience gets space before projects. This preference is editable; display order is separate.
 - A 96% page-fill target and 95% final skills-line target. These are goals, not fabricated-content instructions.
@@ -148,6 +150,26 @@ There are two user-owned files:
 | `settings.local.yaml` | Fonts, colors, spacing, page limits, fill targets, section order, required/excluded points, item exceptions, selection instructions, custom functions. |
 
 `settings.example.yaml` initializes settings once. It is not merged again at runtime. Updating Sharp does not silently replace your local choices. Both personal files are ignored by Git.
+
+List settings are ordinary styles, not renderer constants:
+
+```yaml
+styles:
+  bullet:
+    marker: "•"
+    indent: 12          # Body text starts 12 points inside the margin.
+    marker_offset: 12   # Marker starts 12 points before the body text.
+    after: 4
+    bold: false
+    color: "#1A1A1A"
+```
+
+Wrapped lines align with the bullet body. To remove a marker, set it to an empty
+string; indentation is separately editable. Per-bullet exceptions use the same
+style fields. A marker that cannot fit its allotted offset produces an error.
+PDF output includes selectable marker text and L/LI/Lbl/LBody list tags; this is
+not a PDF/UA certification or a guarantee of interpretation by every ATS.
+Existing saved local settings are not silently upgraded to new defaults.
 
 Settings examples:
 

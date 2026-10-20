@@ -133,12 +133,22 @@ class Style(Record):
     font: str = "Helvetica"
     size: float = Field(default=10, ge=6, le=60)
     leading: float = Field(default=13, ge=6)
-    color: str = Field(default="#20242a", pattern=r"^#[0-9a-fA-F]{6}$")
+    color: str = Field(default="#1A1A1A", pattern=r"^#[0-9a-fA-F]{6}$")
     bold: bool = False
     italic: bool = False
     before: float = Field(default=0, ge=0)
     after: float = Field(default=4, ge=0)
     indent: float = Field(default=0, ge=0)
+    marker: str = ""
+    marker_offset: float = Field(default=0, ge=0)
+
+    @model_validator(mode="after")
+    def valid_marker(self):
+        if "\n" in self.marker or "\r" in self.marker:
+            raise ValueError("List marker must be a single line")
+        if self.marker and not 0 < self.marker_offset <= self.indent:
+            raise ValueError("List marker_offset must be positive and fit within indent")
+        return self
 
 
 class TextRun(Record):
@@ -199,10 +209,13 @@ class Settings(Record):
     styles: dict[str, Style] = Field(
         default_factory=lambda: {
             "body": Style(),
-            "name": Style(size=20, leading=24, after=3),
+            "name": Style(size=20, leading=24, after=3, bold=True),
+            "label": Style(size=10.5, leading=14, before=4, after=3, bold=True, color="#C44B12"),
             "contact": Style(size=9, leading=12, after=2),
-            "heading": Style(size=11, leading=14, before=8, after=5),
-            "owner": Style(size=10.5, leading=14, before=4, after=3),
+            "heading": Style(size=11, leading=14, before=8, after=5, bold=True, color="#C44B12"),
+            "owner": Style(size=10.5, leading=14, before=4, after=3, bold=True, color="#1F5A8A"),
+            "education": Style(bold=True),
+            "bullet": Style(indent=12, marker="•", marker_offset=12),
         }
     )
     exceptions: dict[str, dict[str, Any]] = Field(default_factory=dict)

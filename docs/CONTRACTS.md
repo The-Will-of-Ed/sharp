@@ -112,11 +112,13 @@ All offsets are Unicode code points. All geometry is in points from the top-left
 | `size` | number | no; see schema default | Text size in points; contributes to measured dimensions. |
 | `leading` | number | no; see schema default | Line height in points; controls vertical space and readability. |
 | `color` | string | no; see schema default | Hex text color; a geometry-preserving decoration. |
-| `bold` | boolean | no; see schema default | Explicit weight flag. False in every shipped style; never inferred from metrics. |
+| `bold` | boolean | no; see schema default | Explicit weight flag. Shipped hierarchy bolds names, roles, headings and degree rows; bullet phrases require explicit ranges. |
 | `italic` | boolean | no; see schema default | Explicit slant flag. False in shipped styles. |
 | `before` | number | no; see schema default | Space before a block in points; measured before fitting. |
 | `after` | number | no; see schema default | Space after a block in points; included in keep-with-next calculations. |
-| `indent` | number | no; see schema default | Left indentation in points; reduces available line width. |
+| `indent` | number | no; see schema default | Body-text indentation in points; reduces available width and aligns wrapped list lines. |
+| `marker` | string | no; see schema default | Optional list label text, separate from canonical career wording; empty disables the visible marker. |
+| `marker_offset` | number | no; see schema default | Distance from body-text start back to marker start in points; must fit within indent and accommodate glyph width. |
 
 ## TextRun
 

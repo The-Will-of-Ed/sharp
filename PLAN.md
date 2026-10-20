@@ -23,7 +23,7 @@ settings.local.yaml is the complete local settings authority, initialized once f
 
 ## Creation flow
 
-Import/review career -> supply job -> choose approved evidence once -> before-layout changes -> measure/fit -> after-layout paint -> PDF/preview/checks. Saved runs can restart at selection, fitting, or export. PDF is default. PPTX/DOCX/cover letters are opt-in. Defaults contain no bold text.
+Import/review career -> supply job -> choose approved evidence once -> before-layout changes -> measure/fit -> after-layout paint -> PDF/preview/checks. Saved runs can restart at selection, fitting, or export. PDF is default. PPTX/DOCX/cover letters are opt-in. Defaults use the user-approved bold/color hierarchy and configurable hanging list markers; see docs/DEFAULT_STYLE_CHANGE.md.
 
 Choice is a replaceable adapter. An existing agent can submit the plan directly; optional maintained ACP adapters and LiteLLM connect other providers. Custom policy postprocesses selection; it does not modify master claims. Rewriting is a separate proposal/approval operation.
 
@@ -31,4 +31,4 @@ Custom JavaScript functions run through optional Extism, without allowed paths/h
 
 ## Acceptance
 
-Tests precede implementation. Do not weaken tests to accommodate broken behavior. Verify contract errors, stable ownership, qualifiers, no fabricated confidence, no bold defaults, relevance/experience priority, constraints, 1/2-page fitting, line/page fill, logical text order, working links, sandbox boundaries, zero AI calls for formatting/export edits, lazy optional dependencies, and inward-only imports. Review PNG previews. Benchmark local work separately from provider latency; target under two seconds on representative fixtures, not a guarantee for remote inference. Private data, caches, and outputs stay ignored.
+Tests precede implementation. Do not weaken tests to accommodate broken behavior. Verify contract errors, stable ownership, qualifiers, no fabricated confidence, approved default typography and explicit regular overrides, relevance/experience priority, constraints, 1/2-page fitting, line/page fill, logical text order, working links, sandbox boundaries, zero AI calls for formatting/export edits, lazy optional dependencies, and inward-only imports. Review PNG previews. Benchmark local work separately from provider latency; target under two seconds on representative fixtures, not a guarantee for remote inference. Private data, caches, and outputs stay ignored.

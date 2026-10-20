@@ -11,7 +11,7 @@ Validated locally on Windows with Python 3.14.3. This records actual checks, not
 - Ruff checks and source formatting passed. Python compilation passed.
 - The distribution wheel built successfully: sharp_resume-0.1.0-py3-none-any.whl.
 - Three skills passed the skill-creator validator.
-- Default styles were checked for bold=false. Demo and two-page benchmark PDF previews were inspected.
+- The initial regular-only default was verified at that time; it is superseded by the user-approved hierarchy documented in DEFAULT_STYLE_CHANGE.md. Demo and two-page benchmark PDF previews were inspected.
 - Independent read-only subagent reviews found and confirmed fixes for dependency expansion, stale hook inputs, keep-with-next spacing, selection rank, refit exception/order handling, font-error masking, confidence variant revisions, and source-linked approved summaries. No blocker remained in their final targeted reviews.
 
 Tests were added before implementation of the corresponding behavior. Two new test setups needed corrections: the MCP SDK's Python field is is_error rather than its wire alias isError, and the tight-page ranking fixture needed less space to force an actual choice. Behavioral assertions were retained.
@@ -49,3 +49,14 @@ Without a configured rule compiler, real sandbox tests explicitly skip. No fake 
 ## Limits
 
 PDF is the checked layout. DOCX can reflow in Word; PPTX fonts can vary across machines. No universal ATS compatibility score is claimed. Custom functions operate within documented contracts; new layout/export capabilities need implementation. The career model's Sharp extension is validated by its typed contracts, and the standard core is validated at the service boundary with the vendored JSON Resume v1.0.0 schema. Source references, including user attestation, support review rather than independent factual verification.
+
+
+## October 20, 2026: user-approved style defaults
+
+The regular-only default is superseded by DEFAULT_STYLE_CHANGE.md. Full suite:
+70 tests. New checks cover configurable palette/markers/offsets, hanging wrap,
+PDF L/LI/Lbl/LBody structure, two-page MCID/parent-tree resolution, marker and
+first-word extraction on the same line, optional native Office list metadata,
+and explicit regular/marker-free overrides. Career wording remains unchanged.
+The authoritative one-page fictional preview was visually inspected after export.
+A separate layering review found no blocking ownership or dependency issue.

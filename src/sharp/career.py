@@ -169,7 +169,7 @@ def prepare_document(career: Career, settings: Settings, plan: ChoicePlan) -> li
     basics = career.basics
     add("name", "name", basics["name"], "name")
     if basics.get("label"):
-        add("label", "label", basics["label"], "owner")
+        add("label", "label", basics["label"], "label" if "label" in settings.styles else "owner")
     contact = " | ".join(str(basics[k]) for k in ["email", "phone"] if basics.get(k))
     if contact:
         add("contact", "contact", contact, "contact")
@@ -235,6 +235,7 @@ def prepare_document(career: Career, settings: Settings, plan: ChoicePlan) -> li
                         b.id,
                         "work_bullet" if section == "work" else "project_bullet",
                         text,
+                        style="bullet",
                         source_ids=[b.id, owner],
                     )
         if section == "education" and career.education:
@@ -248,6 +249,7 @@ def prepare_document(career: Career, settings: Settings, plan: ChoicePlan) -> li
                         for k in ("institution", "studyType", "area", "endDate")
                         if e.get(k)
                     ),
+                    style="education",
                 )
         if section == "skills" and plan.skill_ids:
             skills = {s.id: s.name for s in career.x_resume.skills}

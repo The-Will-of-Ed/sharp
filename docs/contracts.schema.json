@@ -1749,7 +1749,7 @@
         "description": "Line height in points; controls vertical space and readability."
       },
       "color": {
-        "default": "#20242a",
+        "default": "#1A1A1A",
         "pattern": "^#[0-9a-fA-F]{6}$",
         "title": "Color",
         "type": "string",
@@ -1759,7 +1759,7 @@
         "default": false,
         "title": "Bold",
         "type": "boolean",
-        "description": "Explicit weight flag. False in every shipped style; never inferred from metrics."
+        "description": "Explicit weight flag. Shipped hierarchy bolds names, roles, headings and degree rows; bullet phrases require explicit ranges."
       },
       "italic": {
         "default": false,
@@ -1786,7 +1786,20 @@
         "minimum": 0,
         "title": "Indent",
         "type": "number",
-        "description": "Left indentation in points; reduces available line width."
+        "description": "Body-text indentation in points; reduces available width and aligns wrapped list lines."
+      },
+      "marker": {
+        "default": "",
+        "title": "Marker",
+        "type": "string",
+        "description": "Optional list label text, separate from canonical career wording; empty disables the visible marker."
+      },
+      "marker_offset": {
+        "default": 0,
+        "minimum": 0,
+        "title": "Marker Offset",
+        "type": "number",
+        "description": "Distance from body-text start back to marker start in points; must fit within indent and accommodate glyph width."
       }
     },
     "title": "Style",
@@ -1848,7 +1861,7 @@
             "description": "Line height in points; controls vertical space and readability."
           },
           "color": {
-            "default": "#20242a",
+            "default": "#1A1A1A",
             "pattern": "^#[0-9a-fA-F]{6}$",
             "title": "Color",
             "type": "string",
@@ -1858,7 +1871,7 @@
             "default": false,
             "title": "Bold",
             "type": "boolean",
-            "description": "Explicit weight flag. False in every shipped style; never inferred from metrics."
+            "description": "Explicit weight flag. Shipped hierarchy bolds names, roles, headings and degree rows; bullet phrases require explicit ranges."
           },
           "italic": {
             "default": false,
@@ -1885,7 +1898,20 @@
             "minimum": 0,
             "title": "Indent",
             "type": "number",
-            "description": "Left indentation in points; reduces available line width."
+            "description": "Body-text indentation in points; reduces available width and aligns wrapped list lines."
+          },
+          "marker": {
+            "default": "",
+            "title": "Marker",
+            "type": "string",
+            "description": "Optional list label text, separate from canonical career wording; empty disables the visible marker."
+          },
+          "marker_offset": {
+            "default": 0,
+            "minimum": 0,
+            "title": "Marker Offset",
+            "type": "number",
+            "description": "Distance from body-text start back to marker start in points; must fit within indent and accommodate glyph width."
           }
         },
         "title": "Style",
@@ -2303,7 +2329,7 @@
             "description": "Line height in points; controls vertical space and readability."
           },
           "color": {
-            "default": "#20242a",
+            "default": "#1A1A1A",
             "pattern": "^#[0-9a-fA-F]{6}$",
             "title": "Color",
             "type": "string",
@@ -2313,7 +2339,7 @@
             "default": false,
             "title": "Bold",
             "type": "boolean",
-            "description": "Explicit weight flag. False in every shipped style; never inferred from metrics."
+            "description": "Explicit weight flag. Shipped hierarchy bolds names, roles, headings and degree rows; bullet phrases require explicit ranges."
           },
           "italic": {
             "default": false,
@@ -2340,7 +2366,20 @@
             "minimum": 0,
             "title": "Indent",
             "type": "number",
-            "description": "Left indentation in points; reduces available line width."
+            "description": "Body-text indentation in points; reduces available width and aligns wrapped list lines."
+          },
+          "marker": {
+            "default": "",
+            "title": "Marker",
+            "type": "string",
+            "description": "Optional list label text, separate from canonical career wording; empty disables the visible marker."
+          },
+          "marker_offset": {
+            "default": 0,
+            "minimum": 0,
+            "title": "Marker Offset",
+            "type": "number",
+            "description": "Distance from body-text start back to marker start in points; must fit within indent and accommodate glyph width."
           }
         },
         "title": "Style",
@@ -4096,7 +4135,7 @@
             "description": "Line height in points; controls vertical space and readability."
           },
           "color": {
-            "default": "#20242a",
+            "default": "#1A1A1A",
             "pattern": "^#[0-9a-fA-F]{6}$",
             "title": "Color",
             "type": "string",
@@ -4106,7 +4145,7 @@
             "default": false,
             "title": "Bold",
             "type": "boolean",
-            "description": "Explicit weight flag. False in every shipped style; never inferred from metrics."
+            "description": "Explicit weight flag. Shipped hierarchy bolds names, roles, headings and degree rows; bullet phrases require explicit ranges."
           },
           "italic": {
             "default": false,
@@ -4133,7 +4172,20 @@
             "minimum": 0,
             "title": "Indent",
             "type": "number",
-            "description": "Left indentation in points; reduces available line width."
+            "description": "Body-text indentation in points; reduces available width and aligns wrapped list lines."
+          },
+          "marker": {
+            "default": "",
+            "title": "Marker",
+            "type": "string",
+            "description": "Optional list label text, separate from canonical career wording; empty disables the visible marker."
+          },
+          "marker_offset": {
+            "default": 0,
+            "minimum": 0,
+            "title": "Marker Offset",
+            "type": "number",
+            "description": "Distance from body-text start back to marker start in points; must fit within indent and accommodate glyph width."
           }
         },
         "title": "Style",
@@ -4416,7 +4468,7 @@
             "description": "Line height in points; controls vertical space and readability."
           },
           "color": {
-            "default": "#20242a",
+            "default": "#1A1A1A",
             "pattern": "^#[0-9a-fA-F]{6}$",
             "title": "Color",
             "type": "string",
@@ -4426,7 +4478,7 @@
             "default": false,
             "title": "Bold",
             "type": "boolean",
-            "description": "Explicit weight flag. False in every shipped style; never inferred from metrics."
+            "description": "Explicit weight flag. Shipped hierarchy bolds names, roles, headings and degree rows; bullet phrases require explicit ranges."
           },
           "italic": {
             "default": false,
@@ -4453,7 +4505,20 @@
             "minimum": 0,
             "title": "Indent",
             "type": "number",
-            "description": "Left indentation in points; reduces available line width."
+            "description": "Body-text indentation in points; reduces available width and aligns wrapped list lines."
+          },
+          "marker": {
+            "default": "",
+            "title": "Marker",
+            "type": "string",
+            "description": "Optional list label text, separate from canonical career wording; empty disables the visible marker."
+          },
+          "marker_offset": {
+            "default": 0,
+            "minimum": 0,
+            "title": "Marker Offset",
+            "type": "number",
+            "description": "Distance from body-text start back to marker start in points; must fit within indent and accommodate glyph width."
           }
         },
         "title": "Style",
@@ -6963,7 +7028,7 @@
             "description": "Line height in points; controls vertical space and readability."
           },
           "color": {
-            "default": "#20242a",
+            "default": "#1A1A1A",
             "pattern": "^#[0-9a-fA-F]{6}$",
             "title": "Color",
             "type": "string",
@@ -6973,7 +7038,7 @@
             "default": false,
             "title": "Bold",
             "type": "boolean",
-            "description": "Explicit weight flag. False in every shipped style; never inferred from metrics."
+            "description": "Explicit weight flag. Shipped hierarchy bolds names, roles, headings and degree rows; bullet phrases require explicit ranges."
           },
           "italic": {
             "default": false,
@@ -7000,7 +7065,20 @@
             "minimum": 0,
             "title": "Indent",
             "type": "number",
-            "description": "Left indentation in points; reduces available line width."
+            "description": "Body-text indentation in points; reduces available width and aligns wrapped list lines."
+          },
+          "marker": {
+            "default": "",
+            "title": "Marker",
+            "type": "string",
+            "description": "Optional list label text, separate from canonical career wording; empty disables the visible marker."
+          },
+          "marker_offset": {
+            "default": 0,
+            "minimum": 0,
+            "title": "Marker Offset",
+            "type": "number",
+            "description": "Distance from body-text start back to marker start in points; must fit within indent and accommodate glyph width."
           }
         },
         "title": "Style",
@@ -8505,7 +8583,7 @@
             "description": "Line height in points; controls vertical space and readability."
           },
           "color": {
-            "default": "#20242a",
+            "default": "#1A1A1A",
             "pattern": "^#[0-9a-fA-F]{6}$",
             "title": "Color",
             "type": "string",
@@ -8515,7 +8593,7 @@
             "default": false,
             "title": "Bold",
             "type": "boolean",
-            "description": "Explicit weight flag. False in every shipped style; never inferred from metrics."
+            "description": "Explicit weight flag. Shipped hierarchy bolds names, roles, headings and degree rows; bullet phrases require explicit ranges."
           },
           "italic": {
             "default": false,
@@ -8542,7 +8620,20 @@
             "minimum": 0,
             "title": "Indent",
             "type": "number",
-            "description": "Left indentation in points; reduces available line width."
+            "description": "Body-text indentation in points; reduces available width and aligns wrapped list lines."
+          },
+          "marker": {
+            "default": "",
+            "title": "Marker",
+            "type": "string",
+            "description": "Optional list label text, separate from canonical career wording; empty disables the visible marker."
+          },
+          "marker_offset": {
+            "default": 0,
+            "minimum": 0,
+            "title": "Marker Offset",
+            "type": "number",
+            "description": "Distance from body-text start back to marker start in points; must fit within indent and accommodate glyph width."
           }
         },
         "title": "Style",
@@ -10156,7 +10247,7 @@
             "description": "Line height in points; controls vertical space and readability."
           },
           "color": {
-            "default": "#20242a",
+            "default": "#1A1A1A",
             "pattern": "^#[0-9a-fA-F]{6}$",
             "title": "Color",
             "type": "string",
@@ -10166,7 +10257,7 @@
             "default": false,
             "title": "Bold",
             "type": "boolean",
-            "description": "Explicit weight flag. False in every shipped style; never inferred from metrics."
+            "description": "Explicit weight flag. Shipped hierarchy bolds names, roles, headings and degree rows; bullet phrases require explicit ranges."
           },
           "italic": {
             "default": false,
@@ -10193,7 +10284,20 @@
             "minimum": 0,
             "title": "Indent",
             "type": "number",
-            "description": "Left indentation in points; reduces available line width."
+            "description": "Body-text indentation in points; reduces available width and aligns wrapped list lines."
+          },
+          "marker": {
+            "default": "",
+            "title": "Marker",
+            "type": "string",
+            "description": "Optional list label text, separate from canonical career wording; empty disables the visible marker."
+          },
+          "marker_offset": {
+            "default": 0,
+            "minimum": 0,
+            "title": "Marker Offset",
+            "type": "number",
+            "description": "Distance from body-text start back to marker start in points; must fit within indent and accommodate glyph width."
           }
         },
         "title": "Style",

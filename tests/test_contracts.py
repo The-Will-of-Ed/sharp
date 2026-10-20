@@ -1,11 +1,24 @@
 import pytest
-from sharp.contracts import Career, Settings, Confidence
-from sharp.career import validate_career, choice_input, approve_changes, confidence_hashes
+
+from sharp.career import approve_changes, choice_input, confidence_hashes, validate_career
+from sharp.contracts import Confidence, Settings
 from sharp.selection import validate_plan
 
 
-def test_all_default_styles_are_regular():
-    assert all(not x.bold for x in Settings().styles.values())
+def test_default_typography_matches_user_approved_styles():
+    styles = Settings().styles
+    assert {key for key, style in styles.items() if style.bold} == {
+        "name",
+        "label",
+        "heading",
+        "owner",
+        "education",
+    }
+    assert styles["body"].color == "#1A1A1A"
+    assert styles["heading"].color == styles["label"].color == "#C44B12"
+    assert styles["owner"].color == "#1F5A8A"
+    assert styles["bullet"].marker == "•"
+    assert styles["bullet"].indent == styles["bullet"].marker_offset == 12
 
 
 def test_neutral_unrated(career, settings):
@@ -30,34 +43,52 @@ def test_review_detects_claim_or_definition_change(career, settings):
     assert bullet.confidence.level == "high"
 
 
-@pytest.mark.parametrize("mutation", ["duplicate", "owner", "confidence", "evidence", "qualifier", "variant"])
+@pytest.mark.parametrize(
+    "mutation", ["duplicate", "owner", "confidence", "evidence", "qualifier", "variant"]
+)
 def test_career_reference_validation(career, mutation):
     b = career.x_resume.bullets[0]
-    if mutation == "duplicate": career.x_resume.bullets.append(b.model_copy())
-    if mutation == "owner": b.owner_id = "missing"
-    if mutation == "confidence": b.confidence.level = "made_up"
-    if mutation == "evidence": b.evidence_ids = ["missing"]
-    if mutation == "qualifier": career.x_resume.bullets[1].text = "Realized $5M."
+    if mutation == "duplicate":
+        career.x_resume.bullets.append(b.model_copy())
+    if mutation == "owner":
+        b.owner_id = "missing"
+    if mutation == "confidence":
+        b.confidence.level = "made_up"
+    if mutation == "evidence":
+        b.evidence_ids = ["missing"]
+    if mutation == "qualifier":
+        career.x_resume.bullets[1].text = "Realized $5M."
     if mutation == "variant":
         from sharp.contracts import Variant
+
         career.x_resume.bullets[1].variants = [Variant(id="short", text="Realized $5M")]
-    with pytest.raises(ValueError): validate_career(career)
+    with pytest.raises(ValueError):
+        validate_career(career)
 
 
 def test_plan_cannot_invent_or_select_unapproved(career, plan, settings):
     from sharp.contracts import Decision
+
     plan.ranked.append(Decision(candidate_id="fake"))
-    with pytest.raises(ValueError): validate_plan(plan, career, settings)
+    with pytest.raises(ValueError):
+        validate_plan(plan, career, settings)
     plan.ranked.pop()
     career.x_resume.bullets[0].approval = "proposed"
-    with pytest.raises(ValueError): validate_plan(plan, career, settings)
+    with pytest.raises(ValueError):
+        validate_plan(plan, career, settings)
 
 
 def test_proposal_needs_current_revision_and_preserves_qualifiers(career):
-    from sharp.contracts import ProposedChanges, Proposal
     from sharp.career import digest
-    proposal = ProposedChanges(base_hash=digest(career), changes=[Proposal(target_id="w2", text="Realized $5M", evidence_ids=["e1"], qualifiers=[])])
-    with pytest.raises(ValueError): approve_changes(career, proposal)
+    from sharp.contracts import Proposal, ProposedChanges
+
+    proposal = ProposedChanges(
+        base_hash=digest(career),
+        changes=[Proposal(target_id="w2", text="Realized $5M", evidence_ids=["e1"], qualifiers=[])],
+    )
+    with pytest.raises(ValueError):
+        approve_changes(career, proposal)
     assert "not realized" in career.x_resume.bullets[1].text
     proposal.base_hash = "stale"
-    with pytest.raises(ValueError): approve_changes(career, proposal)
+    with pytest.raises(ValueError):
+        approve_changes(career, proposal)

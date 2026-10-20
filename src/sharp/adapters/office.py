@@ -4,6 +4,7 @@ from pathlib import Path
 
 from sharp.contracts import Artifact
 
+from .office_lists import docx_list, pptx_list
 from .pdf import segments
 
 
@@ -45,8 +46,12 @@ class OfficeExporter:
             for p in (p for p in layout.placed if p.page == page):
                 leading = p.measurement.height / len(p.measurement.lines)
                 for i, line in enumerate(p.measurement.lines):
+                    offset = p.block.style.marker_offset if i == 0 and p.block.style.marker else 0
                     shape = slide.shapes.add_textbox(
-                        Pt(p.x), Pt(p.y + i * leading), Pt(p.width + 1), Pt(leading + 2)
+                        Pt(p.x - offset),
+                        Pt(p.y + i * leading),
+                        Pt(p.width + offset + 1),
+                        Pt(leading + 2),
                     )
                     frame = shape.text_frame
                     frame.word_wrap = False
@@ -55,6 +60,8 @@ class OfficeExporter:
                     ) = 0
                     paragraph = frame.paragraphs[0]
                     paragraph.space_before = paragraph.space_after = Pt(0)
+                    if offset:
+                        pptx_list(paragraph, p.block.style)
                     for text, style in segments(p.block, line.start, line.end):
                         run = paragraph.add_run()
                         run.text = text
@@ -93,6 +100,7 @@ class OfficeExporter:
         normal = doc.styles["Normal"]
         normal.paragraph_format.space_before = normal.paragraph_format.space_after = Pt(0)
         current = 1
+        list_ids = {}
         for p in layout.placed:
             if p.page != current:
                 doc.add_page_break()
@@ -104,6 +112,8 @@ class OfficeExporter:
                 p.measurement.height / len(p.measurement.lines)
             )
             paragraph.paragraph_format.left_indent = Pt(p.block.style.indent)
+            if p.block.style.marker:
+                docx_list(doc, paragraph, p.block.style, list_ids)
             paragraph.paragraph_format.keep_with_next = p.block.kind in (
                 "heading",
                 "owner",
