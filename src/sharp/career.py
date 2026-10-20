@@ -170,7 +170,13 @@ def prepare_document(career: Career, settings: Settings, plan: ChoicePlan) -> li
     add("name", "name", basics["name"], "name")
     if basics.get("label"):
         add("label", "label", basics["label"], "label" if "label" in settings.styles else "owner")
-    contact = " | ".join(str(basics[k]) for k in ["email", "phone"] if basics.get(k))
+    location = basics.get("location") or {}
+    location_text = ", ".join(
+        str(location[k]) for k in ("city", "region", "countryCode") if location.get(k)
+    )
+    contact = " | ".join(
+        str(value) for value in (basics.get("email"), basics.get("phone"), location_text) if value
+    )
     if contact:
         add("contact", "contact", contact, "contact")
     for i, profile in enumerate(basics.get("profiles", [])):
