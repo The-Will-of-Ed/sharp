@@ -1,0 +1,19 @@
+{
+  "disclosure": "Entirely fictional candidate and accomplishments; real job postings. IBM employment is also fictional.",
+  "candidate": "Roran StrongHammer",
+  "years": 9,
+  "employers": 6,
+  "work_bullets": 35,
+  "projects": 14,
+  "total_bullets": 49,
+  "skills": 49,
+  "summaries": 4,
+  "limitations": [
+    "No professional ML model training",
+    "No Rust or C++ production experience",
+    "No kernel or graphics engineering",
+    "No hyperscale ownership claims",
+    "No employment history at target companies"
+  ],
+  "career_sha256": "8ee53946e0bfdb2878d2b1854da236438a012ba2caf8c83bdfd85fc42cfa20c7"
+}

@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "ranked": [
+    {
+      "candidate_id": "harbor_event_delivery",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_delivery",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_tracking",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_payments",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_oncall",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_observability",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_kubernetes",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_streaming",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_mentoring",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_contracts",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_tests",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_migration",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_api_latency",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_database",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_identity",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_ci",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_support",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_sdk",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_roadmap",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_enterprise",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_analytics",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_load_lab",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_flag_service",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_incident_assistant",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    }
+  ],
+  "summary_id": "sum_platform",
+  "skill_ids": [
+    "sk_distributed",
+    "sk_reliability",
+    "sk_kubernetes",
+    "sk_grpc",
+    "sk_kafka",
+    "sk_otel",
+    "sk_prometheus",
+    "sk_grafana",
+    "sk_testing",
+    "sk_cicd",
+    "sk_architecture",
+    "sk_documentation",
+    "sk_leadership",
+    "sk_collaboration",
+    "sk_go",
+    "sk_java",
+    "sk_aws",
+    "sk_terraform",
+    "sk_docker",
+    "sk_performance",
+    "sk_python",
+    "sk_llm"
+  ],
+  "provider": "acp",
+  "model": "gpt-6-sol",
+  "requirements": {},
+  "usage": {},
+  "provider_version": "2.2.2",
+  "raw_response_ref": null
+}

@@ -1,0 +1,34 @@
+Company: Amazon
+Role: Software Development Engineer II, Amazon Prime Video
+Job ID: 10432755
+Source: https://www.amazon.jobs/en/jobs/10432755/software-development-engineer-ii-amazon-prime-video
+Location: 
+
+Description
+Job summary
+Prime Video is disrupting the traditional television and movie industry with a massive library of high-quality media and reliable digital delivery. Our services are engineered for high availability, maximum reach, and cost savings that we can pass on to customers. We enable the world to watch video instantly, from any device, whether on the road or from the comfort of a living room sofa. Today, we deliver Movies, TV shows and Live Sports to Windows and Mac PCs, portable devices, gaming consoles, smart phones, and smart TVs. We operate in over 250 countries and territories and we aspire to grow -- a lot.
+We are looking for smart, motivated Software Development Engineer who can help in building platform for delivering live video events to our customer. If you have experience building large-scale, high-performance, customer-friendly products and are interested in designing multi-tier services to handle large datasets, complex domains, and problems at Amazon scale, this is the job for you.
+Our innovative systems include high efficient and large scale platforms built on Amazon's cloud computing infrastructure. For this position you will have a strong background in OO design with a modern programming language. Experience working with web services, XML, JSON, Apache services is desired. Linux system development experience is a plus. Equally important to these specific skills is the ability to multi-task, quickly adapt to new development environments and changing business requirements, learn new systems, create reliable/maintainable code, and find creative and scalable solutions to difficult problems.
+You are highly-motivated and thrive in an environment where problems are open-ended. You enjoy engaging in passionate discussions with smart people and letting the best ideas rise to the top. You see your mistakes as learning opportunities and continually look for ways to improve yourself, your team and your products. You understand that not all solutions come easily and don’t shy away from hard work to reach your goals. You are excited about the opportunity to engage in developing a top notch consumer web application and user experience.
+Key job responsibilities
+As an SDE II on the Playback Testing Services team, you will design and build the systems that ensure millions of Prime Video customers have a flawless streaming experience — across live sports, on-demand content, and linear channels on thousands of device types worldwide.
+You will:
+1. Build intelligent monitoring and detection systems that identify video and audio defects at scale before they reach customers
+2. Develop tooling for rapid reproduction of production issues across device, content, and feature permutations
+3. Own services end-to-end: from architecture and implementation through deployment and operations
+4. Work on challenging problems in device emulation, streaming protocol validation, and quality of experience measurement
+Our systems are high-reliability and low-operational-overhead by design — you will maintain that bar while scaling to meet the growing complexity of Prime Video's live sports portfolio (NFL, NBA, World Cup) and expanding device ecosystem. You will leverage AWS technologies including CloudFront, EC2, S3, DynamoDB, Lambda, SNS, and SQS.
+About the team
+The team is chartered to design highly stable systems to automate Playback experiences across a full stack of content types. This tooling is used in our live operation centers 24x7 to monitor events in real time, by builder teams across Prime Video, in critical service pipelines, and as a part of the launch of every Tier 1 event on Prime Video. Prime Video is viewed by a massive audience daily, and you will help ensure our customers have the highest quality experience.
+We are open to hiring candidates to work out of one of the following locations:
+Seattle, WA, USA
+Basic Qualifications
+- 3+ years of non-internship professional software development experience
+- 2+ years of non-internship design or architecture (design patterns, reliability and scaling) of new and existing systems experience
+- Experience programming with at least one software programming language
+Preferred Qualifications
+- 3+ years of full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations experience
+- Bachelor's degree in computer science or equivalent
+- Experience working on a consumer hardware or software product
+- 1+ years tooling or development work associated with consumer devices (e.g. Android, iOS, FireTV, Web, and/or living room devices)
+

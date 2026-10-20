@@ -1,0 +1,4 @@
+# Preserve exported artifacts byte-for-byte across Windows and Linux clones.
+*.pdf binary
+*.png binary
+*.zip binary

@@ -1,4 +1,5 @@
-﻿"""Build a portable static gallery from completed runs and saved job snapshots."""
+"""Build a portable static gallery from completed runs and saved job snapshots."""
+
 import argparse
 import hashlib
 import html
@@ -8,7 +9,7 @@ import zipfile
 from pathlib import Path
 
 
-def build(root):
+def build(root, repo_url=None):
     root = Path(root).resolve()
     read = lambda path: json.loads(path.read_text(encoding="utf-8"))
     esc = html.escape
@@ -35,17 +36,39 @@ def build(root):
         shutil.copy2(pdf, dest / pdf.name)
         shutil.copy2(out / "preview-1.png", dest / "preview.png")
         href = esc(f"resumes/{slug}/{pdf.name}", quote=True)
-        cards.append(f'<article><h2>{esc(job["company"])}</h2><p>{esc(job["role"])}</p><a href="{href}"><img src="resumes/{slug}/preview.png" alt="Resume preview" loading="lazy"></a><p><a href="{href}">Open PDF</a> | <a href="postings/{slug}.html">Saved posting</a> | <a href="{source}">Original source</a></p></article>')
+        cards.append(
+            f'<article><h2>{esc(job["company"])}</h2><p>{esc(job["role"])}</p><a href="{href}"><img src="resumes/{slug}/preview.png" alt="Resume preview" loading="lazy"></a><p><a href="{href}">Open PDF</a> | <a href="postings/{slug}.html">Saved posting</a> | <a href="{source}">Original source</a></p></article>'
+        )
     inventory = []
     for key in ("work", "projects"):
         for owner in career[key]:
-            bullets = [b["text"] for b in career["x_resume"]["bullets"] if b["owner_id"] == owner["x_id"]]
-            inventory.append(f'<details><summary>{esc(owner["name"])}'+(f' | {esc(owner["position"])}' if owner.get("position") else '')+'</summary><ul>'+''.join(f'<li>{esc(b)}</li>' for b in bullets)+'</ul></details>')
+            bullets = [
+                b["text"] for b in career["x_resume"]["bullets"] if b["owner_id"] == owner["x_id"]
+            ]
+            inventory.append(
+                f"<details><summary>{esc(owner['name'])}"
+                + (f" | {esc(owner['position'])}" if owner.get("position") else "")
+                + "</summary><ul>"
+                + "".join(f"<li>{esc(b)}</li>" for b in bullets)
+                + "</ul></details>"
+            )
     name = career["basics"]["name"]
-    page = f'<!doctype html><meta charset="utf-8"><title>{esc(name)} - 30 Resumes</title><style>{style}</style><h1>{esc(name)} - 30 tailored resumes</h1><p>Single page. Default styling. Click a preview to open its PDF. Saved postings remain readable when employer links disappear.</p><details><summary>Full career inventory: {len(career["work"])} experiences and {len(career["projects"])} projects</summary><p>Resumes select from this inventory; they do not include every record. These PDFs reuse the previous job-specific selections. The two newly added internships are available for future tailoring.</p>'+''.join(inventory)+'</details><p><a href="fixture/master.yaml">Master YAML</a> | <a href="refresh-timing.json">Edit timing report</a></p><div class="grid">'+''.join(cards)+'</div>'
+    links = (
+        f'<a href="{esc(name, quote=True)} - 30 Resumes.zip">Download all resumes and postings</a>'
+    )
+    if repo_url:
+        links += f' | <a href="{esc(repo_url, quote=True)}">View GitHub repository</a>'
+
+    page = (
+        f'<!doctype html><meta charset="utf-8"><title>{esc(name)} - 30 Resumes</title><style>{style}</style><h1>{esc(name)} - 30 tailored resumes</h1><p>Single page. Default styling. Click a preview to open its PDF. Saved postings remain readable when employer links disappear.</p><p>{links}</p><details><summary>Full career inventory: {len(career["work"])} experiences and {len(career["projects"])} projects</summary><p>Resumes select from this inventory; they do not include every record. These PDFs reuse the previous job-specific selections. The two newly added internships are available for future tailoring.</p>'
+        + "".join(inventory)
+        + '</details><p><a href="fixture/master.yaml">Master YAML</a> | <a href="refresh-timing.json">Edit timing report</a></p><div class="grid">'
+        + "".join(cards)
+        + "</div>"
+    )
     (root / "index.html").write_text(page, encoding="utf-8")
     with zipfile.ZipFile(root / f"{name} - 30 Resumes.zip", "w", zipfile.ZIP_DEFLATED) as archive:
-        for folder in ("resumes", "fixture", "job_posts", "postings"):
+        for folder in ("resumes", "fixture", "job_posts", "postings", "selections"):
             for path in (root / folder).rglob("*"):
                 if path.is_file():
                     archive.write(path, path.relative_to(root))
@@ -57,4 +80,6 @@ def build(root):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", required=True)
-    build(parser.parse_args().root)
+    parser.add_argument("--repo-url")
+    args = parser.parse_args()
+    build(args.root, args.repo_url)

@@ -1,0 +1,446 @@
+{
+  "version": 1,
+  "ranked": [
+    {
+      "candidate_id": "harbor_event_delivery",
+      "variant_id": null,
+      "requirement_ids": [
+        "queue_delivery",
+        "reliability",
+        "documentation"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_tracking",
+      "variant_id": null,
+      "requirement_ids": [
+        "scalability",
+        "reliability",
+        "distributed_systems"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_streaming",
+      "variant_id": null,
+      "requirement_ids": [
+        "queue_delivery",
+        "distributed_systems",
+        "monitoring"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_payments",
+      "variant_id": null,
+      "requirement_ids": [
+        "correctness",
+        "distributed_systems",
+        "api_design"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_observability",
+      "variant_id": null,
+      "requirement_ids": [
+        "monitoring",
+        "debugging",
+        "documentation"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_oncall",
+      "variant_id": null,
+      "requirement_ids": [
+        "monitoring",
+        "debugging",
+        "reliability"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_api_latency",
+      "variant_id": null,
+      "requirement_ids": [
+        "performance",
+        "debugging",
+        "data_analysis"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_delivery",
+      "variant_id": null,
+      "requirement_ids": [
+        "ownership",
+        "reliability",
+        "ci_git"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_contracts",
+      "variant_id": null,
+      "requirement_ids": [
+        "correctness",
+        "api_design",
+        "quality"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_ci",
+      "variant_id": null,
+      "requirement_ids": [
+        "ci_git",
+        "quality"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_mentoring",
+      "variant_id": null,
+      "requirement_ids": [
+        "mentoring",
+        "documentation",
+        "communication"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_sdk",
+      "variant_id": null,
+      "requirement_ids": [
+        "typescript_javascript",
+        "api_design",
+        "quality",
+        "documentation"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_database",
+      "variant_id": null,
+      "requirement_ids": [
+        "performance",
+        "distributed_systems",
+        "data_analysis"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_analytics",
+      "variant_id": null,
+      "requirement_ids": [
+        "data_analysis",
+        "quality"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_kubernetes",
+      "variant_id": null,
+      "requirement_ids": [
+        "ownership",
+        "reliability",
+        "documentation"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_identity",
+      "variant_id": null,
+      "requirement_ids": [
+        "security",
+        "quality"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_search",
+      "variant_id": null,
+      "requirement_ids": [
+        "api_design",
+        "product_improvements",
+        "data_analysis"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_roadmap",
+      "variant_id": null,
+      "requirement_ids": [
+        "ownership",
+        "api_design",
+        "communication"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_tests",
+      "variant_id": null,
+      "requirement_ids": [
+        "correctness",
+        "ci_git",
+        "debugging"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_enterprise",
+      "variant_id": null,
+      "requirement_ids": [
+        "api_design",
+        "quality"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_migration",
+      "variant_id": null,
+      "requirement_ids": [
+        "reliability",
+        "correctness"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_support",
+      "variant_id": null,
+      "requirement_ids": [
+        "debugging",
+        "monitoring",
+        "documentation"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_auth",
+      "variant_id": null,
+      "requirement_ids": [
+        "security",
+        "quality"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_privacy",
+      "variant_id": null,
+      "requirement_ids": [
+        "security",
+        "correctness"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_merchant_ui",
+      "variant_id": null,
+      "requirement_ids": [
+        "full_stack",
+        "product_improvements",
+        "mentoring"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_frontend",
+      "variant_id": null,
+      "requirement_ids": [
+        "full_stack",
+        "typescript_javascript",
+        "product_improvements"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_docker",
+      "variant_id": null,
+      "requirement_ids": [
+        "ownership",
+        "quality"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "alder_web",
+      "variant_id": null,
+      "requirement_ids": [
+        "full_stack",
+        "typescript_javascript",
+        "api_design"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_load_lab",
+      "variant_id": null,
+      "requirement_ids": [
+        "queue_delivery",
+        "scalability",
+        "performance",
+        "systems_programming"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_flag_service",
+      "variant_id": null,
+      "requirement_ids": [
+        "systems_programming",
+        "correctness",
+        "product_improvements"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_package_checker",
+      "variant_id": null,
+      "requirement_ids": [
+        "typescript_javascript",
+        "ci_git",
+        "quality"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_game_server",
+      "variant_id": null,
+      "requirement_ids": [
+        "systems_programming",
+        "scalability",
+        "distributed_systems"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_incident_assistant",
+      "variant_id": null,
+      "requirement_ids": [
+        "ai_tools",
+        "quality",
+        "security"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_calendar_api",
+      "variant_id": null,
+      "requirement_ids": [
+        "api_design",
+        "security",
+        "reliability"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_collab_notes",
+      "variant_id": null,
+      "requirement_ids": [
+        "full_stack",
+        "typescript_javascript",
+        "reliability"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    }
+  ],
+  "summary_id": "sum_backend",
+  "skill_ids": [
+    "sk_distributed",
+    "sk_reliability",
+    "sk_kafka",
+    "sk_go",
+    "sk_java",
+    "sk_typescript",
+    "sk_javascript",
+    "sk_performance",
+    "sk_otel",
+    "sk_prometheus",
+    "sk_grafana",
+    "sk_testing",
+    "sk_cicd",
+    "sk_git",
+    "sk_rest",
+    "sk_grpc",
+    "sk_postgres",
+    "sk_sql",
+    "sk_security",
+    "sk_documentation",
+    "sk_leadership",
+    "sk_architecture",
+    "sk_collaboration",
+    "sk_data_engineering",
+    "sk_analytics",
+    "sk_docker",
+    "sk_kubernetes",
+    "sk_redis",
+    "sk_openapi",
+    "sk_developer_experience"
+  ],
+  "provider": "acp",
+  "model": "gpt-6-sol",
+  "requirements": {
+    "queue_delivery": "Improve message buffering, delivery behavior, and delivery guarantees in a message queuing service.",
+    "scalability": "Improve producer and consumer scalability under load.",
+    "reliability": "Improve reliability of a high-volume production service.",
+    "distributed_systems": "Experience with distributed systems and data.",
+    "correctness": "Own correctness and quality.",
+    "api_design": "Design and build APIs and developer-platform features.",
+    "monitoring": "Monitor and alert on high-volume production systems.",
+    "debugging": "Debug production systems and user-facing bugs.",
+    "performance": "Improve service performance.",
+    "documentation": "Write design documents and explain complex ideas clearly.",
+    "ownership": "Own work from design through release.",
+    "ci_git": "Experience with continuous integration workflows and git.",
+    "quality": "Validate software quality through testing.",
+    "mentoring": "Share knowledge and mentor others.",
+    "communication": "Communicate solutions clearly.",
+    "data_analysis": "Analyze data sets such as logs.",
+    "typescript_javascript": "Solid understanding of TypeScript and JavaScript.",
+    "security": "Understand security issues and responsibilities.",
+    "product_improvements": "Ship new features and product improvements.",
+    "full_stack": "Contribute across all layers of the software stack.",
+    "systems_programming": "Strong systems-level programming skills.",
+    "ai_tools": "Use AI tools thoughtfully without compromising security, reliability, or quality."
+  },
+  "usage": {},
+  "provider_version": "2.2.2",
+  "raw_response_ref": null
+}

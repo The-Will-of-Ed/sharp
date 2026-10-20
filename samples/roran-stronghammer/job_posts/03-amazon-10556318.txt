@@ -1,0 +1,28 @@
+Company: Amazon
+Role: Software Development Engineer II
+Job ID: 10556318
+Source: https://www.amazon.jobs/en/jobs/10556318/software-development-engineer-ii
+Location: 
+
+Description
+Do you want to build data systems that serve millions of customers every day? Our team collects petabytes of data from thousands of sources across Amazon — catalog, inventory, orders, page views, and more — and makes it accessible to Research Scientists, Machine Learning Specialists, Business Analysts, and Data Engineers across the company. We build an enterprise-wide Data Lake using Amazon Web Services (AWS) technologies, enabling teams to store analytical data in services like Amazon S3, DynamoDB, and Aurora, and process it through compute environments such as EMR/Spark, Redshift, and Athena.
+As a Software Development Engineer II on our team, you will design and build scalable components and features that power data catalog, data discovery, and data transformation products. This is a hands-on role where you will work across the full software development lifecycle — from working backwards from customer needs through design, implementation, testing, deployment, and operations. You will collaborate closely with internal customers to understand their data challenges and deliver the right solutions, while mentoring fellow engineers and contributing to the technical direction of the team.
+Key job responsibilities
+- Design and implement scalable distributed systems for large-scale data processing, translating complex functional and technical requirements into clear architecture and well-structured code.
+- Collaborate with internal customers, stakeholders, and peers to understand their data needs and deliver solutions that improve their ability to access and analyze data effectively.
+- Contribute across the full software development lifecycle — including design, code review, testing, deployment, and operational support — while identifying and resolving root causes of operational issues.
+- Mentor engineers on your team through code reviews, design discussions, and knowledge sharing, helping build a strong engineering culture.
+- Evaluate emerging technologies and approaches in the data processing space, making recommendations for adoption that keep the team's tools and practices current.
+A day in the life
+You might start your morning reviewing a design document for a new data ingestion pipeline, then jump into a code review with a teammate before writing code for a feature that helps internal teams query data more efficiently. After lunch, you could pair with a colleague to troubleshoot an operational issue, identify its root cause, and implement a permanent fix. Throughout, you will balance new feature work with operational improvements, and regularly connect with the engineers and analysts who rely on the systems you build.
+About the team
+Our team is focused on building and evolving Amazon's enterprise Data Lake platform, making it easier for thousands of teams to produce, discover, and process analytical data at massive scale. We are developing next-generation data catalog, discovery, and transformation products that serve a broad range of technical users across the company.
+We value collaboration, mentorship, and continuous learning. Whether you are reviewing a design with a senior engineer or onboarding a new team member, you will find an inclusive environment where knowledge sharing is part of the daily rhythm. If you are excited about solving hard data problems that impact Amazon at scale, we would love to hear from you.
+Basic Qualifications
+- 3+ years of non-internship professional software development experience
+- 2+ years of non-internship design or architecture (design patterns, reliability and scaling) of new and existing systems experience
+- Experience programming with at least one software programming language
+Preferred Qualifications
+- 3+ years of full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations experience
+- Bachelor's degree in computer science or equivalent
+

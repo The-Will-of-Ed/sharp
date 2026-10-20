@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "page": {
+    "width": 612.0,
+    "height": 792.0,
+    "margins": [
+      36.0,
+      40.0,
+      36.0,
+      40.0
+    ],
+    "max_pages": 1,
+    "fill_targets": [
+      0.96
+    ]
+  },
+  "styles": {
+    "body": {
+      "font": "Helvetica",
+      "size": 10.0,
+      "leading": 13.0,
+      "color": "#1A1A1A",
+      "bold": false,
+      "italic": false,
+      "before": 0.0,
+      "after": 4.0,
+      "indent": 0.0,
+      "marker": "",
+      "marker_offset": 0.0
+    },
+    "name": {
+      "font": "Helvetica",
+      "size": 20.0,
+      "leading": 24.0,
+      "color": "#1A1A1A",
+      "bold": true,
+      "italic": false,
+      "before": 0.0,
+      "after": 3.0,
+      "indent": 0.0,
+      "marker": "",
+      "marker_offset": 0.0
+    },
+    "label": {
+      "font": "Helvetica",
+      "size": 10.5,
+      "leading": 14.0,
+      "color": "#C44B12",
+      "bold": true,
+      "italic": false,
+      "before": 4.0,
+      "after": 3.0,
+      "indent": 0.0,
+      "marker": "",
+      "marker_offset": 0.0
+    },
+    "contact": {
+      "font": "Helvetica",
+      "size": 9.0,
+      "leading": 12.0,
+      "color": "#1A1A1A",
+      "bold": false,
+      "italic": false,
+      "before": 0.0,
+      "after": 2.0,
+      "indent": 0.0,
+      "marker": "",
+      "marker_offset": 0.0
+    },
+    "heading": {
+      "font": "Helvetica",
+      "size": 11.0,
+      "leading": 14.0,
+      "color": "#C44B12",
+      "bold": true,
+      "italic": false,
+      "before": 8.0,
+      "after": 5.0,
+      "indent": 0.0,
+      "marker": "",
+      "marker_offset": 0.0
+    },
+    "owner": {
+      "font": "Helvetica",
+      "size": 10.5,
+      "leading": 14.0,
+      "color": "#1F5A8A",
+      "bold": true,
+      "italic": false,
+      "before": 4.0,
+      "after": 3.0,
+      "indent": 0.0,
+      "marker": "",
+      "marker_offset": 0.0
+    },
+    "education": {
+      "font": "Helvetica",
+      "size": 10.0,
+      "leading": 13.0,
+      "color": "#1A1A1A",
+      "bold": true,
+      "italic": false,
+      "before": 0.0,
+      "after": 4.0,
+      "indent": 0.0,
+      "marker": "",
+      "marker_offset": 0.0
+    },
+    "bullet": {
+      "font": "Helvetica",
+      "size": 10.0,
+      "leading": 13.0,
+      "color": "#1A1A1A",
+      "bold": false,
+      "italic": false,
+      "before": 0.0,
+      "after": 4.0,
+      "indent": 12.0,
+      "marker": "•",
+      "marker_offset": 12.0
+    }
+  },
+  "exceptions": {},
+  "section_order": [
+    "summary",
+    "work",
+    "projects",
+    "education",
+    "skills"
+  ],
+  "experience_first": true,
+  "constraints": {
+    "required": [],
+    "excluded": [],
+    "requires": {}
+  },
+  "skills_fill_target": 0.95,
+  "skills_max_lines": 3,
+  "selection_instructions": "Choose proven relevant function first. Prefer relevant work experience before projects. Preserve ownership, qualifications and evidence. Use user confidence as secondary guidance, not factual certainty.",
+  "customizations": []
+}

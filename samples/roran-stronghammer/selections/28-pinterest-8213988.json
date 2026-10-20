@@ -1,0 +1,308 @@
+{
+  "version": 1,
+  "ranked": [
+    {
+      "candidate_id": "pine_analytics",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_pipelines",
+        "r_sql_python",
+        "r_data_quality"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_database",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_sql_python",
+        "r_pipelines",
+        "r_data_quality"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_streaming",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_pipelines",
+        "r_data_quality",
+        "r_documentation"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_observability",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_instrumentation",
+        "r_metrics",
+        "r_documentation"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_privacy",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_governance",
+        "r_pipelines"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_api_latency",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_sql_python",
+        "r_metrics"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_roadmap",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_collaboration"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_contracts",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_data_quality",
+        "r_collaboration"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_migration",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_pipelines",
+        "r_sql_python",
+        "r_data_quality"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "alder_sql",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_sql_python",
+        "r_data_quality",
+        "r_collaboration"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_search",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_discoverability",
+        "r_collaboration"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_sdk",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_self_service",
+        "r_documentation"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_oncall",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_metrics",
+        "r_data_quality",
+        "r_documentation"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_event_delivery",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_pipelines",
+        "r_data_quality",
+        "r_documentation"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_payments",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_pipelines",
+        "r_data_quality"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_tracking",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_pipelines",
+        "r_data_quality"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_merchant_ui",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_collaboration",
+        "r_metrics"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_mentoring",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_collaboration",
+        "r_documentation"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_ci",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_data_quality",
+        "r_self_service"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_support",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_instrumentation",
+        "r_documentation",
+        "r_collaboration"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_feature_store",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_pipelines",
+        "r_sql_python",
+        "r_self_service"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_incident_assistant",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_ai",
+        "r_ai_verification",
+        "r_governance"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_support_classifier",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_ai_verification",
+        "r_sql_python",
+        "r_metrics"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_vector_playground",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_ai_verification",
+        "r_sql_python",
+        "r_discoverability"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_cost_dashboard",
+      "variant_id": null,
+      "requirement_ids": [
+        "r_sql_python",
+        "r_metrics",
+        "r_self_service"
+      ],
+      "reason": null,
+      "provider_confidence": null
+    }
+  ],
+  "summary_id": "sum_platform",
+  "skill_ids": [
+    "sk_sql",
+    "sk_python",
+    "sk_data_engineering",
+    "sk_analytics",
+    "sk_postgres",
+    "sk_kafka",
+    "sk_aws",
+    "sk_s3",
+    "sk_testing",
+    "sk_documentation",
+    "sk_collaboration",
+    "sk_performance",
+    "sk_otel",
+    "sk_reliability",
+    "sk_privacy",
+    "sk_search",
+    "sk_llm",
+    "sk_evaluation"
+  ],
+  "provider": "acp",
+  "model": "gpt-6-sol",
+  "requirements": {
+    "r_pipelines": "Build and operate scalable analysis pipelines and data workflows.",
+    "r_sql_python": "Use SQL and Python for data analysis, query optimization and partitioning.",
+    "r_data_quality": "Improve data quality and produce trusted datasets.",
+    "r_instrumentation": "Develop practical instrumentation standards.",
+    "r_metrics": "Provide reliable metrics, insights and investigation tools.",
+    "r_documentation": "Document tools, datasets, metrics and operating practices.",
+    "r_governance": "Support reliable, well-governed data practices and protect sensitive data.",
+    "r_collaboration": "Translate partner needs into technical work across teams.",
+    "r_discoverability": "Improve data or information discoverability.",
+    "r_self_service": "Enable independent access to trusted tools and data.",
+    "r_ai": "Use AI to accelerate analysis or prototyping.",
+    "r_ai_verification": "Critically evaluate and verify AI-assisted work."
+  },
+  "usage": {},
+  "provider_version": "2.2.2",
+  "raw_response_ref": null
+}

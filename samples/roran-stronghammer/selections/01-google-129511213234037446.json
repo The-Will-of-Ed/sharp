@@ -1,0 +1,324 @@
+{
+  "version": 1,
+  "ranked": [
+    {
+      "candidate_id": "harbor_merchant_ui",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_accessibility",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_sdk",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_mentoring",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_delivery",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_payments",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_api_latency",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_identity",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_event_delivery",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_observability",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_frontend",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_tracking",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_ci",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_contracts",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_search",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_roadmap",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_oncall",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_streaming",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_kubernetes",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_database",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_enterprise",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_tests",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_support",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_auth",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_docker",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "harbor_privacy",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "ibm_migration",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pine_analytics",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "alder_web",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "alder_quality",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "alder_sql",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_accessibility_kit",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_package_checker",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_flag_service",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_collab_notes",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_image_browser",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_load_lab",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_calendar_api",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_vector_playground",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    },
+    {
+      "candidate_id": "pr_recipe_app",
+      "variant_id": null,
+      "requirement_ids": [],
+      "reason": null,
+      "provider_confidence": null
+    }
+  ],
+  "summary_id": "sum_fullstack",
+  "skill_ids": [
+    "sk_java",
+    "sk_go",
+    "sk_python",
+    "sk_javascript",
+    "sk_typescript",
+    "sk_react",
+    "sk_spring",
+    "sk_node",
+    "sk_rest",
+    "sk_postgres",
+    "sk_testing",
+    "sk_playwright",
+    "sk_accessibility",
+    "sk_architecture",
+    "sk_leadership",
+    "sk_collaboration",
+    "sk_documentation",
+    "sk_developer_experience",
+    "sk_distributed",
+    "sk_reliability",
+    "sk_performance",
+    "sk_security",
+    "sk_cicd",
+    "sk_kubernetes",
+    "sk_openapi",
+    "sk_kafka",
+    "sk_grpc",
+    "sk_redis",
+    "sk_websocket",
+    "sk_search"
+  ],
+  "provider": "acp",
+  "model": "gpt-6-sol",
+  "requirements": {},
+  "usage": {},
+  "provider_version": "2.2.2",
+  "raw_response_ref": null
+}

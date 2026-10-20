@@ -1,0 +1,407 @@
+{
+  "resumes": 30,
+  "ai_calls": 0,
+  "selection_source": "Saved selections from the previous 30-job Codex ACP run. Newly added experiences remain unselected until new tailoring.",
+  "batch_seconds": 12.29439719999209,
+  "median_seconds": 0.35957769997185096,
+  "runs": [
+    {
+      "slug": "01-google-129511213234037446",
+      "wall_s": 0.593563299975358,
+      "timings": {
+        "selection": 0.012066999915987253,
+        "layout": 0.05726519995369017,
+        "export": 0.3323253000853583,
+        "total": 0.4896485999925062
+      },
+      "warnings": [
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "02-google-76443197546341062",
+      "wall_s": 0.3511192000005394,
+      "timings": {
+        "selection": 0.008269999991171062,
+        "layout": 0.02201799990143627,
+        "export": 0.12683470000047237,
+        "total": 0.23262529994826764
+      },
+      "warnings": [
+        "Skills final-line fill 94.9% is below target 95.0%; no unsupported filler added",
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "03-amazon-10556318",
+      "wall_s": 0.3419238000642508,
+      "timings": {
+        "selection": 0.009404800017364323,
+        "layout": 0.0238074999069795,
+        "export": 0.11901240004226565,
+        "total": 0.2284027999266982
+      },
+      "warnings": [
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "04-amazon-10432755",
+      "wall_s": 0.33158019999973476,
+      "timings": {
+        "selection": 0.010729400091804564,
+        "layout": 0.022377199959009886,
+        "export": 0.1226993000600487,
+        "total": 0.2294840000104159
+      },
+      "warnings": [
+        "Skills final-line fill 53.4% is below target 95.0%; no unsupported filler added",
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "05-apple-200684861",
+      "wall_s": 0.3788636999670416,
+      "timings": {
+        "selection": 0.011948600062169135,
+        "layout": 0.02697270002681762,
+        "export": 0.15259710000827909,
+        "total": 0.26717020000796765
+      },
+      "warnings": [
+        "Skills final-line fill 92.8% is below target 95.0%; no unsupported filler added"
+      ]
+    },
+    {
+      "slug": "06-stripe-7557899",
+      "wall_s": 0.31992419995367527,
+      "timings": {
+        "selection": 0.00875479995738715,
+        "layout": 0.01716599997598678,
+        "export": 0.10924989997874945,
+        "total": 0.20998729998245835
+      },
+      "warnings": [
+        "Skills final-line fill 6.9% is below target 95.0%; no unsupported filler added"
+      ]
+    },
+    {
+      "slug": "07-stripe-8260985",
+      "wall_s": 0.386292599956505,
+      "timings": {
+        "selection": 0.010005999938584864,
+        "layout": 0.023759400006383657,
+        "export": 0.1624352999497205,
+        "total": 0.27249399991706014
+      },
+      "warnings": []
+    },
+    {
+      "slug": "08-stripe-7230670",
+      "wall_s": 0.4712990999687463,
+      "timings": {
+        "selection": 0.013950399938039482,
+        "layout": 0.03472879994660616,
+        "export": 0.17621890001464635,
+        "total": 0.35311460006050766
+      },
+      "warnings": [
+        "Skills final-line fill 49.1% is below target 95.0%; no unsupported filler added",
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "09-airbnb-8257826",
+      "wall_s": 0.5688184999162331,
+      "timings": {
+        "selection": 0.039301900076679885,
+        "layout": 0.053968299995176494,
+        "export": 0.19821539998520166,
+        "total": 0.4502723999321461
+      },
+      "warnings": []
+    },
+    {
+      "slug": "10-airbnb-7763610",
+      "wall_s": 0.510178100084886,
+      "timings": {
+        "selection": 0.018501599901355803,
+        "layout": 0.053685500053688884,
+        "export": 0.1735095001058653,
+        "total": 0.3690692000091076
+      },
+      "warnings": [
+        "Skills final-line fill 94.5% is below target 95.0%; no unsupported filler added",
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "11-airbnb-8242235",
+      "wall_s": 0.4666577000170946,
+      "timings": {
+        "selection": 0.01401889999397099,
+        "layout": 0.04096460004802793,
+        "export": 0.1711456999182701,
+        "total": 0.35295079997740686
+      },
+      "warnings": [
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "12-figma-5790627004",
+      "wall_s": 0.5789624000899494,
+      "timings": {
+        "selection": 0.015473000006750226,
+        "layout": 0.06778509996365756,
+        "export": 0.19347579998429865,
+        "total": 0.45265570003539324
+      },
+      "warnings": [
+        "Skills final-line fill 43.5% is below target 95.0%; no unsupported filler added"
+      ]
+    },
+    {
+      "slug": "13-figma-5691911004",
+      "wall_s": 0.5044137999648228,
+      "timings": {
+        "selection": 0.02422239992301911,
+        "layout": 0.046361399930901825,
+        "export": 0.17286349995993078,
+        "total": 0.3646149999694899
+      },
+      "warnings": [
+        "Skills final-line fill 88.6% is below target 95.0%; no unsupported filler added",
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "14-figma-5551686004",
+      "wall_s": 0.4929687000112608,
+      "timings": {
+        "selection": 0.015688200015574694,
+        "layout": 0.050202100072056055,
+        "export": 0.16034429997671396,
+        "total": 0.34445319999940693
+      },
+      "warnings": [
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "15-cloudflare-8080780",
+      "wall_s": 0.6321709000039846,
+      "timings": {
+        "selection": 0.026718200067989528,
+        "layout": 0.11026480002328753,
+        "export": 0.20256589993368834,
+        "total": 0.49349999998230487
+      },
+      "warnings": [
+        "Skills final-line fill 94.8% is below target 95.0%; no unsupported filler added"
+      ]
+    },
+    {
+      "slug": "16-cloudflare-8273693",
+      "wall_s": 0.4245287999510765,
+      "timings": {
+        "selection": 0.01937049999833107,
+        "layout": 0.03273689991328865,
+        "export": 0.13119020010344684,
+        "total": 0.30893379996996373
+      },
+      "warnings": [
+        "Skills final-line fill 53.4% is below target 95.0%; no unsupported filler added",
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "17-cloudflare-8104955",
+      "wall_s": 0.3418254000134766,
+      "timings": {
+        "selection": 0.01009549992159009,
+        "layout": 0.022209599963389337,
+        "export": 0.12940699991304427,
+        "total": 0.23746530001517385
+      },
+      "warnings": [
+        "Skills final-line fill 68.5% is below target 95.0%; no unsupported filler added"
+      ]
+    },
+    {
+      "slug": "18-reddit-8044767",
+      "wall_s": 0.33673830004408956,
+      "timings": {
+        "selection": 0.009561799932271242,
+        "layout": 0.02188149990979582,
+        "export": 0.11841829994227737,
+        "total": 0.2269537999527529
+      },
+      "warnings": [
+        "Skills final-line fill 76.3% is below target 95.0%; no unsupported filler added"
+      ]
+    },
+    {
+      "slug": "19-reddit-8147617",
+      "wall_s": 0.34572610002942383,
+      "timings": {
+        "selection": 0.009955700021237135,
+        "layout": 0.02432359999511391,
+        "export": 0.12434769992250949,
+        "total": 0.2360078999772668
+      },
+      "warnings": [
+        "Skills final-line fill 68.5% is below target 95.0%; no unsupported filler added"
+      ]
+    },
+    {
+      "slug": "20-reddit-7950520",
+      "wall_s": 0.3559497999958694,
+      "timings": {
+        "selection": 0.010434299940243363,
+        "layout": 0.028479300090111792,
+        "export": 0.13305740000214428,
+        "total": 0.25321270001586527
+      },
+      "warnings": [
+        "Skills final-line fill 93.6% is below target 95.0%; no unsupported filler added",
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "21-discord-8811574002",
+      "wall_s": 0.3505252000177279,
+      "timings": {
+        "selection": 0.01060100004542619,
+        "layout": 0.024434300023131073,
+        "export": 0.12134700000751764,
+        "total": 0.23504940001294017
+      },
+      "warnings": [
+        "Skills final-line fill 92.3% is below target 95.0%; no unsupported filler added",
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "22-discord-8856467002",
+      "wall_s": 0.34323170001152903,
+      "timings": {
+        "selection": 0.009228800074197352,
+        "layout": 0.019609699957072735,
+        "export": 0.12366519996430725,
+        "total": 0.23191480000969023
+      },
+      "warnings": [
+        "Skills final-line fill 22.7% is below target 95.0%; no unsupported filler added"
+      ]
+    },
+    {
+      "slug": "23-discord-8817776002",
+      "wall_s": 0.38771070004440844,
+      "timings": {
+        "selection": 0.011985700111836195,
+        "layout": 0.02986769995186478,
+        "export": 0.1512451000744477,
+        "total": 0.27281330002006143
+      },
+      "warnings": [
+        "Skills final-line fill 89.6% is below target 95.0%; no unsupported filler added",
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "24-datadog-8102624",
+      "wall_s": 0.3536318000406027,
+      "timings": {
+        "selection": 0.009440100053325295,
+        "layout": 0.024844300001859665,
+        "export": 0.11736180004663765,
+        "total": 0.2368726999266073
+      },
+      "warnings": [
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "25-datadog-8242722",
+      "wall_s": 0.3384369999403134,
+      "timings": {
+        "selection": 0.008585100062191486,
+        "layout": 0.021488599944859743,
+        "export": 0.1256102001061663,
+        "total": 0.23281939991284162
+      },
+      "warnings": [
+        "Skills final-line fill 68.9% is below target 95.0%; no unsupported filler added"
+      ]
+    },
+    {
+      "slug": "26-datadog-7993551",
+      "wall_s": 0.345910600037314,
+      "timings": {
+        "selection": 0.009374700020998716,
+        "layout": 0.020736000034958124,
+        "export": 0.13430000003427267,
+        "total": 0.2397508000722155
+      },
+      "warnings": [
+        "Skills final-line fill 49.9% is below target 95.0%; no unsupported filler added",
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "27-pinterest-5459622",
+      "wall_s": 0.3882818999700248,
+      "timings": {
+        "selection": 0.01862530002836138,
+        "layout": 0.03529180004261434,
+        "export": 0.13757449993863702,
+        "total": 0.26654310000594705
+      },
+      "warnings": [
+        "Skills final-line fill 92.3% is below target 95.0%; no unsupported filler added"
+      ]
+    },
+    {
+      "slug": "28-pinterest-8213988",
+      "wall_s": 0.3502727000741288,
+      "timings": {
+        "selection": 0.011607700027525425,
+        "layout": 0.019429399981163442,
+        "export": 0.13640149997081608,
+        "total": 0.24591980001423508
+      },
+      "warnings": [
+        "Skills final-line fill 61.7% is below target 95.0%; no unsupported filler added"
+      ]
+    },
+    {
+      "slug": "29-pinterest-6510646",
+      "wall_s": 0.3382197000319138,
+      "timings": {
+        "selection": 0.012647700030356646,
+        "layout": 0.03220580006018281,
+        "export": 0.12054260005243123,
+        "total": 0.24266590003389865
+      },
+      "warnings": [
+        "Skills final-line fill 93.2% is below target 95.0%; no unsupported filler added",
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    },
+    {
+      "slug": "30-dropbox-6330377",
+      "wall_s": 0.3632055999478325,
+      "timings": {
+        "selection": 0.01006439991760999,
+        "layout": 0.0256599000422284,
+        "export": 0.12952690001111478,
+        "total": 0.24034609994851053
+      },
+      "warnings": [
+        "Skills final-line fill 88.5% is below target 95.0%; no unsupported filler added",
+        "Page 1 fill 96.0% below target 96.0%"
+      ]
+    }
+  ]
+}

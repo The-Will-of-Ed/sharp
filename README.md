@@ -4,6 +4,10 @@ Turn career evidence into a tailored resume, then make edits without asking AI t
 
 Sharp is local-first. It keeps your facts, selection, formatting, and exports separate. Bring your current AI agent, an installed agent through ACP, or a model gateway. There is no required hosted service and no required application UI.
 
+## Browse the sample gallery
+
+Open [30 sample resumes and saved job postings](samples/roran-stronghammer/index.html). The gallery includes previews, PDFs, the full career inventory, job snapshots and a ZIP download. [Publishing instructions](samples/roran-stronghammer/README.md) explain GitHub Pages setup for The-Will-of-Ed/sharp.
+
 ## Try it
 
 From the Sharp folder, using Python 3.12 or newer:
