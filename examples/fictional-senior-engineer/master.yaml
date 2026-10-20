@@ -30,6 +30,16 @@ work:
   position: Junior Software Engineer
   startDate: 2017-06
   endDate: 2017-12
+- x_id: cedar
+  name: Cedarpoint Health Systems
+  position: Software Engineering Intern
+  startDate: 2016-06
+  endDate: 2016-08
+- x_id: north
+  name: Northgate Learning Studio
+  position: Web Development Intern
+  startDate: 2015-06
+  endDate: 2015-08
 projects:
 - x_id: incident_assistant
   name: Incident-summary prototype
@@ -629,6 +639,73 @@ x_resume:
     - sk_javascript
     - sk_testing
     - sk_accessibility
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: cedar_imports
+    owner_id: cedar
+    text: Built Python validation scripts for appointment-data imports; flagged missing
+      identifiers and duplicate rows before loading staging tables in PostgreSQL.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_python
+    - sk_postgres
+    - sk_testing
+    - sk_data_engineering
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: cedar_reports
+    owner_id: cedar
+    text: Created SQL reports for clinic operations staff and documented reconciliation
+      checks against weekly CSV exports.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_sql
+    - sk_analytics
+    - sk_documentation
+    - sk_collaboration
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: north_enrollment
+    owner_id: north
+    text: Developed JavaScript enrollment forms and Node.js endpoints for a tutoring
+      center; added server-side validation and clear field-level error messages.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_javascript
+    - sk_node
+    - sk_rest
+    - sk_testing
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: north_usability
+    owner_id: north
+    text: Worked with instructors to simplify lesson scheduling on mobile screens
+      and tested keyboard navigation across the revised pages.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_javascript
+    - sk_accessibility
+    - sk_collaboration
     qualifiers: []
     approval: approved
     confidence:

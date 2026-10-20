@@ -77,6 +77,8 @@ def profile():
         ("pine", "Pinecrest Freight Systems", "Software Engineer II", "2020-03", "2023-05"),
         ("ibm", "IBM", "Software Engineer", "2018-01", "2020-02"),
         ("alder", "Aldercrest Digital", "Junior Software Engineer", "2017-06", "2017-12"),
+        ("cedar", "Cedarpoint Health Systems", "Software Engineering Intern", "2016-06", "2016-08"),
+        ("north", "Northgate Learning Studio", "Web Development Intern", "2015-06", "2015-08"),
     ]
     groups = {
         "harbor": [
@@ -243,6 +245,30 @@ def profile():
             ),
         ],
     }
+    groups["cedar"] = [
+        (
+            "imports",
+            "Built Python validation scripts for appointment-data imports; flagged missing identifiers and duplicate rows before loading staging tables in PostgreSQL.",
+            "python postgres testing data_engineering",
+        ),
+        (
+            "reports",
+            "Created SQL reports for clinic operations staff and documented reconciliation checks against weekly CSV exports.",
+            "sql analytics documentation collaboration",
+        ),
+    ]
+    groups["north"] = [
+        (
+            "enrollment",
+            "Developed JavaScript enrollment forms and Node.js endpoints for a tutoring center; added server-side validation and clear field-level error messages.",
+            "javascript node rest testing",
+        ),
+        (
+            "usability",
+            "Worked with instructors to simplify lesson scheduling on mobile screens and tested keyboard navigation across the revised pages.",
+            "javascript accessibility collaboration",
+        ),
+    ]
     project_rows = [
         (
             "incident_assistant",
@@ -497,7 +523,7 @@ def profile():
     )
     save(fixture / "career.json", data)
     settings = Settings()
-    settings.selection_instructions += " Use ONLY this fictional career and this job. Do not read files, use tools, or infer extra experience. Rank up to 18 genuinely relevant bullets with strongest evidence first; give one short specific reason each. Capture 4-6 key requirements. Select only relevant skills, distinguishing project exposure from professional experience. Specialist gaps are acceptable. No need to force all four employers into a page."
+    settings.selection_instructions += " Use ONLY this fictional career and this job. Do not read files, use tools, or infer extra experience. Rank up to 18 genuinely relevant bullets with strongest evidence first; give one short specific reason each. Capture 4-6 key requirements. Select only relevant skills, distinguishing project exposure from professional experience. Specialist gaps are acceptable. No need to force all employers into a page."
     save(fixture / "settings.json", settings)
     save(
         fixture / "inventory.json",
@@ -505,7 +531,7 @@ def profile():
             disclosure="Entirely fictional candidate and accomplishments; real job postings. IBM employment is also fictional.",
             candidate="Alex Rowan",
             years=9,
-            employers=4,
+            employers=len(work),
             work_bullets=sum(map(len, groups.values())),
             projects=len(project_rows),
             total_bullets=len(bullets),
