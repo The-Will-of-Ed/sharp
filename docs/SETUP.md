@@ -39,7 +39,7 @@ From the repository root, Windows PowerShell:
 ```powershell
 $sharpPython = (Resolve-Path .venv\Scripts\python.exe).Path
 & $sharpPython -m sharp --help
-& $sharpPython -m sharp init data/career
+& $sharpPython -m sharp workspace_initialize --root data/career
 $sharpWorkspace = (Resolve-Path data/career).Path
 ```
 
@@ -48,7 +48,7 @@ macOS/Linux:
 ```sh
 sharp_python="$(pwd)/.venv/bin/python"
 "$sharp_python" -m sharp --help
-"$sharp_python" -m sharp init data/career
+"$sharp_python" -m sharp workspace_initialize --root data/career
 sharp_workspace="$(pwd)/data/career"
 ```
 
@@ -113,7 +113,7 @@ Supported readers: PDF, DOCX, PPTX, text, Markdown, YAML, and JSON. For scanned/
 CLI extraction is also available. For example, from the repository root on Windows:
 
 ```powershell
-& $sharpPython -m sharp intake data/career/sources/resumes data/career/sources/notes --output data/career/intake.json
+& $sharpPython -m sharp material_extract --root data/career --args '{"paths":["sources/resumes","sources/notes"]}'
 ```
 
 On macOS/Linux, substitute `"$sharp_python"` for `& $sharpPython`. The CLI returns extracted material; it does not run an automatic resume-to-master model or semantic deduplication. The import skill supplies that reasoning. Complete reviewed replacement uses the MCP operation above; the CLI also exposes existing-wording proposal approval and explicit legacy migration.
@@ -142,3 +142,7 @@ For a cover letter, read `skills/sharp-cover-letter/SKILL.md` and supply reviewe
 Setup is complete only after the agent can discover Sharp's MCP tools and initialize/inspect its private workspace. Before claiming the user's career is ready, review and validate the imported master. Before delivering a resume, actually create it, inspect its warnings and PDF, and report the path. Review fill targets and supported sections/layouts, and confirm that any scanned pages were actually inspected by the agent.
 
 The automated integration test covers multiple PDF/DOCX folders, real stdio MCP extraction, reviewed master replacement, and PDF generation with a supplied choice plan. It tests the plumbing, not the quality of an arbitrary agent's interpretation of a person's career.
+
+## CLI and MCP parity
+
+All operation names and arguments are identical in both interfaces. Use `sharp --help` and `sharp <operation> --schema` to discover them. CLI uses `--root` for the private workspace and `--args` for a JSON object or `@file` containing JSON/YAML arguments. It returns UTF-8 JSON on stdout. Argument-file paths resolve from the shell directory; paths inside operation arguments must stay inside the workspace. Only `mcp` is transport-specific.

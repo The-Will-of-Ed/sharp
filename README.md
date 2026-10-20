@@ -19,7 +19,7 @@ From the Sharp folder, using Python 3.12 or newer:
 ```text
 python -m venv .venv
 .venv\Scripts\python.exe -m pip install -e ".[test,preview]"
-.venv\Scripts\python.exe -m sharp demo --output outputs/demo
+.venv\Scripts\python.exe -m sharp document_demo
 ```
 
 The demo uses clearly fictional career data. It needs no AI, API key, Office installation, or custom-rule compiler. Open the resulting PDF or PNG. Low fill is reported honestly because the example contains only three bullets.
@@ -29,11 +29,15 @@ Sharp is an independent Python project with its own `.venv`. `uv.lock` pins its 
 For your own material:
 
 ```text
-sharp init .
-sharp intake path/to/resumes path/to/notes --output data/intake.json
+sharp workspace_initialize --root data/career
+sharp material_extract --root data/career --args @sources.json
 ```
 
 Ask your agent to use the career-import skill to turn these sources and your context into a reviewed master. The initialized master is empty apart from a name placeholder. It does not claim the demo's achievements as yours.
+
+## One interface, two transports
+
+Every operation has identical names, typed arguments, validation, workspace boundaries, and returned data in CLI and MCP. `sharp --help` lists operations; `sharp <operation> --schema` prints the input contract. CLI accepts `--args` as JSON or `@file` for JSON/YAML. Argument files resolve from the shell directory; operation paths resolve inside `--root` (default: current directory). CLI prints UTF-8 JSON. `mcp` only starts the transport. The shared catalog is `src/sharp/operations.py`; adding an operation there exposes it through both transports.
 
 ## The whole flow
 
@@ -88,11 +92,15 @@ Your existing agent can call `choice_context`, select approved bullet IDs, and p
 For file-based use:
 
 ```text
-sharp context --career master.yaml --settings settings.local.yaml --job-file job.txt
-sharp create --request request.yaml
+sharp choice_context --root data/career --args @context.json
+sharp document_create --root data/career --args @create.yaml
 ```
 
-Example request:
+`context.json` contains `career_path`, `settings_path`, and `job` (posting text or URL).
+`create.yaml` wraps the request below under `request:`. Optional `choice_plan` and
+`provider` are sibling keys. `sources.json` contains `{"paths":["sources/resumes","sources/notes"]}`.
+
+Example request (inside `request:`):
 
 ```yaml
 document_type: resume
@@ -122,7 +130,7 @@ use their own explicit paths. Outputs and local career/settings files remain
 Git-ignored; source, tests, defaults, documentation and fictional examples are
 versioned. Keep local ACP installations and the virtual environment ignored too.
 
-Optional provider configuration:
+Optional provider configuration (the `provider` field in `create.yaml`):
 
 ```yaml
 # Gateway routes generative models, Jev, or other decision models.
@@ -133,7 +141,7 @@ mode: chat   # or decisions
 ```
 
 ```text
-sharp create --request request.yaml --provider provider.local.yaml
+sharp document_create --root data/career --args @create.yaml
 ```
 
 Credentials stay in environment variables, not career/settings files. Gateway inference may cost money. Missing provider cost is recorded as unknown, not zero. Decision models rank existing evidence; they do not write a summary or cover letter. The current decision route batches up to 128 bullet/skill/summary questions.
@@ -220,10 +228,10 @@ Relevance and explicit constraints come first. A very-high assessment does not m
 ## Edit, resume, export
 
 ```text
-sharp inspect outputs/my-application
-sharp edit outputs/my-application --changes '{"styles.body.size":9.5}'
-sharp export outputs/my-application --format pptx
-sharp export outputs/my-application --format docx
+sharp run_inspect --args '{"directory":"outputs/my-application"}'
+sharp run_edit --args '{"directory":"outputs/my-application","settings_changes":{"styles.body.size":9.5}}'
+sharp run_export --args '{"directory":"outputs/my-application","format":"pptx"}'
+sharp run_export --args '{"directory":"outputs/my-application","format":"docx"}'
 ```
 
 Formatting edits reuse the saved career and choice, rebuilding presentation from the revised settings. They do not run selection again. The base document is also saved for inspection. Exports reuse saved layout. Dedicated output folders are staged and replaced only after success, so failed regeneration preserves the previous complete run.

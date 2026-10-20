@@ -1,9 +1,10 @@
 # Validation
 
-Validated locally on Windows with Python 3.14.3. The complete suite passes 75 tests when the custom-rule compiler/runtime prerequisites are configured. Configured Linux/Windows CI is not a claim that every hosted CI run has already completed.
+Validated locally on Windows with Python 3.14.3. The complete suite passes 78 tests when the custom-rule compiler/runtime prerequisites are configured. Configured Linux/Windows CI is not a claim that every hosted CI run has already completed.
 
 ## Functional checks
 
+- Exact CLI/MCP operation and input-schema parity, matching results, invalid-argument rejection, and preservation of demo/migration operations.
 - Real stdio MCP startup, contract discovery, workspace initialization and rejection of outside-workspace paths.
 - Multiple PDF/DOCX source folders through CLI and MCP extraction, a reviewed consolidated master saved through `career_replace`, rejection of stale revisions and PDF generation with a supplied selection plan. The agent supplies consolidation; extraction is not credited with semantic deduplication.
 - Confidence neutrality and reassessment, evidence/approval references, protected qualifiers, required/supporting/excluded points, relevance ranking versus display order, settings changes and per-item exceptions.

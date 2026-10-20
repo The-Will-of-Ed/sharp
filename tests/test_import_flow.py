@@ -30,22 +30,22 @@ def test_multiple_resume_folders_through_cli_and_real_mcp(tmp_path):
     document.add_paragraph("The same contribution appears in both sources.")
     document.save(notes / "resume-notes.docx")
 
-    cli_output = tmp_path / "intake.json"
-    subprocess.run(
+    extracted = subprocess.run(
         [
             sys.executable,
             "-m",
             "sharp",
-            "intake",
-            str(resumes),
-            str(notes),
-            "--output",
-            str(cli_output),
+            "material_extract",
+            "--root",
+            str(tmp_path),
+            "--args",
+            json.dumps({"paths": ["sources/resumes", "sources/notes"]}),
         ],
         check=True,
         capture_output=True,
+        encoding="utf-8",
     )
-    assert len(json.loads(cli_output.read_text(encoding="utf-8"))) == 2
+    assert len(json.loads(extracted.stdout)) == 2
 
     def unpack(result):
         assert not result.is_error, str(result)

@@ -67,7 +67,16 @@ def main():
         save(request_path, request)
         start = perf_counter()
         subprocess.run(
-            [sys.executable, "-m", "sharp", "create", "--request", str(request_path)],
+            [
+                sys.executable,
+                "-m",
+                "sharp",
+                "document_create",
+                "--root",
+                str(root),
+                "--args",
+                json.dumps({"request": request.model_dump()}),
+            ],
             check=True,
             stdout=subprocess.DEVNULL,
         )
