@@ -1,0 +1,35 @@
+{
+  "scope": "Recorded historical Codex ACP runs. Includes startup, inference, fit, PDF export and automated checks. Ready career data and saved postings; excludes collection, profile authoring and human review. Original traces are not distributed. Current gallery is a later no-inference refresh.",
+  "provider": "Codex ACP 2.2.2",
+  "model": "gpt-6-sol",
+  "reasoning": "medium",
+  "cost": "Not measured; existing subscription used.",
+  "runs": [
+    {
+      "generated": 30,
+      "companies": 12,
+      "all_pdf_checks_pass": true,
+      "median_task_s": 27.044092350057326,
+      "min_task_s": 18.285225300001912,
+      "max_task_s": 46.44116709998343,
+      "batch_wall_s": 348.034884,
+      "inference_attempts": 31,
+      "retried_jobs": 1,
+      "workers": 3,
+      "completed_per_minute": 5.171895355179396
+    },
+    {
+      "generated": 30,
+      "companies": 12,
+      "all_pdf_checks_pass": true,
+      "median_task_s": 27.77488495002035,
+      "min_task_s": 22.50012169999536,
+      "max_task_s": 83.18630010006018,
+      "batch_wall_s": 220.428604,
+      "inference_attempts": 33,
+      "retried_jobs": 2,
+      "workers": 10,
+      "completed_per_minute": 8.165909357208468
+    }
+  ]
+}

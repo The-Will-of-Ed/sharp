@@ -1,271 +1,87 @@
-# Sharp
+<p align="center">
+  <img src="assets/SHARP-FULL-SIGNATURE.svg" alt="Sharp" width="560">
+</p>
 
-Turn career evidence into a tailored resume, then make edits without asking AI to choose everything again.
+# Show every employer why you're right for their job.
 
-Sharp is local-first. It keeps your facts, selection, formatting, and exports separate. Bring your current AI agent, an installed agent through ACP, or a model gateway. There is no required hosted service and no required application UI.
+**A custom resume in ~27 seconds. 8+ per minute in parallel.** [Measured with AI inference included.](#the-numbers)
 
-## Browse the sample gallery
+Already using Claude Code or Codex? **Keep them.** Sharp handles the fitting, checks, and preferences you would otherwise have to manage yourself.
 
-Open [30 sample resumes and saved job postings](samples/roran-stronghammer/index.html). The gallery includes previews, PDFs, the full career inventory, job snapshots and a ZIP download. [Publishing instructions](samples/roran-stronghammer/README.md) explain GitHub Pages setup for The-Will-of-Ed/sharp.
+**FREE SOFTWARE | OPEN SOURCE | ATS-FRIENDLY | CUSTOMIZABLE**
 
-## Let your agent set it up
+[**See 30 real-job examples**](https://the-will-of-ed.github.io/sharp/) | [**Get Sharp free on GitHub**](https://github.com/The-Will-of-Ed/sharp) | [**Download the examples**](samples/roran-stronghammer/Roran%20StrongHammer%20-%2030%20Resumes.zip)
 
-Open this folder in Codex or Claude Code and ask it to follow [the complete setup guide](docs/SETUP.md). It installs a local environment, registers the MCP server, verifies tool access, and follows the import skill to turn one or several resumes/folders into a reviewed master. The guide includes Windows and macOS/Linux commands; no separate model/API key is required for that route.
+## Your best points. For that specific job.
 
-## Try it
+You've done a lot. One resume cannot show all of it. Sharp gives your agent a reusable inventory of your experience, projects, and skills so it can choose the strongest relevant evidence for each application.
 
-From the Sharp folder, using Python 3.12 or newer:
+- **No AI-invented achievements in selection.** Only approved career evidence can be selected. New wording is proposed separately for review, so tailoring does not quietly rewrite your history. You should never have to explain an achievement the AI made up.
+- **The page limit is enforced. The space is measured.** Choose one or two pages. Sharp fits ranked evidence within your margins and reports actual fill. Our 30-resume sample reached **96-98.9% page fill**. Fill targets are measured goals; missing space is reported rather than padded with invented content.
+- **Your choices stay.** Required achievements, exclusions, supporting-point dependencies, approved wording, margins, and formatting exceptions persist across applications. The harness enforces saved constraints during generation instead of relying on the agent to remember a prompt.
+- **Edit without starting over.** Change formatting without changing approved content or rerunning AI. Recent one-page formatting edits took **0.44 seconds median** locally.
+- **Multiple resumes in parallel.** The ten-worker benchmark completed **30 in 3m40s**, including retries: **8.2 per minute**, equivalent to about **7.35 seconds of batch time per completed resume**. Individual resumes still took about 28 seconds median.
+- **Checked PDFs, editable when needed.** Single-column, selectable text, reading-order checks, real bullet markers, and clickable links. PDF is the checked default; request editable Word or PowerPoint only when you need them.
+- **Your agent. Your files.** Use the current agent through MCP, the matching CLI, or an optional provider adapter. Career data, preferences, and generated runs stay in local Git-ignored files by default. Connected inference providers still receive the inputs needed for their work.
 
-```text
-python -m venv .venv
-.venv\Scripts\python.exe -m pip install -e ".[test,preview]"
-.venv\Scripts\python.exe -m sharp document_demo
-```
+## Start with the agent you already use
 
-The demo uses clearly fictional career data. It needs no AI, API key, Office installation, or custom-rule compiler. Open the resulting PDF or PNG. Low fill is reported honestly because the example contains only three bullets.
+Clone or download this repository and open it in Claude Code or Codex. Then say:
 
-Sharp is an independent Python project with its own `.venv`. `uv.lock` pins its dependencies. With uv installed, run `uv sync --extra test --extra preview --extra office --extra mcp --extra agents --extra rules` from this folder to recreate development dependencies. Use this folder's `.venv/Scripts/python.exe`; no parent project is required. The development interpreter is pinned in `.python-version`; the package supports Python 3.12 and newer.
+> Follow AGENTS.md and docs/SETUP.md. Set up Sharp in its own environment, connect its MCP tools, and verify them. Read the resumes and notes I point you to, consolidate them into one proposed career master, and show me before applying changes. Keep my originals unchanged and my data out of Git.
 
-For your own material:
+Then paste a posting or give its URL:
 
-```text
-sharp workspace_initialize --root data/career
-sharp material_extract --root data/career --args @sources.json
-```
+> Make a one-page resume for this job from my approved career evidence. Keep my saved preferences, inspect the fit and PDF preview, and give me the finished file.
 
-Ask your agent to use the career-import skill to turn these sources and your context into a reviewed master. The initialized master is empty apart from a name placeholder. It does not claim the demo's achievements as yours.
+For edits:
 
-## One interface, two transports
+> Increase the section spacing and put my profile links on one line with a bar between them. Keep the selected content unchanged. Refit and check the PDF.
 
-Every operation has identical names, typed arguments, validation, workspace boundaries, and returned data in CLI and MCP. `sharp --help` lists operations; `sharp <operation> --schema` prints the input contract. CLI accepts `--args` as JSON or `@file` for JSON/YAML. Argument files resolve from the shell directory; operation paths resolve inside `--root` (default: current directory). CLI prints UTF-8 JSON. `mcp` only starts the transport. The shared catalog is `src/sharp/operations.py`; adding an operation there exposes it through both transports.
+**Needs:** Git, Python 3.12+, and your installed, signed-in agent. No separate model API key is required when your current agent makes the choices. Host permissions or an MCP restart may be needed during setup.
 
-## The whole flow
+[Full setup: Windows, macOS, and Linux](docs/SETUP.md) | [CLI, editing, settings, and exports](docs/USAGE.md) | [Try the no-AI demo](docs/USAGE.md#try-it)
 
-```text
-Resumes + source documents + what you tell your agent
-                         |
-                   Extract and review
-                         |
-                         v
-                  master.yaml                 settings.local.yaml
-                  Facts and proof             Your complete local settings
-                  Approved bullets            Layout and exceptions
-                  User confidence             Selection instructions / functions
-                         |                              |
-Job text or URL ---------+-------------+----------------+
-                                       |
-                              Choose relevant evidence
-                              once, through an adapter
-                                       |
-                              Format before fitting
-                                       |
-                              Measure / fit / inspect
-                                       |
-                              Paint final placement
-                                       |
-                         PDF + preview + saved checkpoints
-                                       |
-                           PPTX / DOCX only if requested
-```
+## Explore before installing
 
-See [the visual architecture](docs/architecture.svg), [its PNG](docs/architecture.png), [every contract field with its meaning](docs/CONTRACTS.md), and [current validation checks](docs/VALIDATION.md).
+[**Open the gallery**](https://the-will-of-ed.github.io/sharp/)
 
-## What exists by default
+Browse **30 single-page resumes for real postings across 12 companies**: Google, Amazon, Apple, Stripe, Airbnb, Figma, Cloudflare, Reddit, Discord, Datadog, Pinterest, and Dropbox.
 
-- One basic, single-column ATS-oriented layout with selectable text and actual link destinations.
-- Bold name, target role, section/employer headings and education rows. Bullet text stays regular unless explicit text ranges request emphasis.
-- Charcoal body (#1A1A1A), orange section/role headings (#C44B12), and blue employer/project headings (#1F5A8A), all controlled by semantic styles.
-- Visible list markers with hanging indentation, plus PDF list structure tags. Marker text and geometry live in `styles.bullet`.
-- One-page output; choose one or two pages in settings.
-- Relevant work experience gets space before projects. This preference is editable; display order is separate.
-- A 96% page-fill target and 95% final skills-line target. These are goals, not fabricated-content instructions.
-- PDF export and an SVG preview. Install the preview extra for PNGs rendered from the actual PDF.
-- Explicit warnings if supported content cannot meet fill targets. No artificial word spacing or invented keywords.
-- Saved career, choice, document, settings, geometry, decision report, and stage events for every successful run.
+Each example links to its PDF, preview, saved posting, and original employer source. The gallery includes the full sample career inventory. Saved postings stay readable after jobs close.
 
-The default supports Summary, Experience, Projects (including service/teaching), Education, and Skills. Other JSON Resume fields are retained for interchange; v1 does not automatically display every optional standard field.
+- [Download all 30 resumes, previews, postings, selections, and sample data](samples/roran-stronghammer/Roran%20StrongHammer%20-%2030%20Resumes.zip).
+- [Inspect the sample master](samples/roran-stronghammer/fixture/master.yaml), [settings](samples/roran-stronghammer/fixture/settings.json), and [job-specific selections](samples/roran-stronghammer/selections).
+- [Learn how to edit and regenerate a saved run](docs/USAGE.md#edit-resume-export), [change preferences](docs/USAGE.md#change-things-directly-or-through-your-agent), or [add custom behavior](docs/USAGE.md#add-behavior-without-touching-core-code).
 
-## Choose without an extra AI process
+The sample person is invented; the job postings are saved employer-published descriptions. The gallery opens locally at `samples/roran-stronghammer/index.html`. The hosted link becomes available after GitHub Pages deployment; [publishing instructions](samples/roran-stronghammer/README.md) are included.
 
-Your existing agent can call `choice_context`, select approved bullet IDs, and pass its `ChoicePlan` directly to `document_create`. No nested Codex or Claude process is necessary.
+## The numbers
 
-For file-based use:
+[Recorded AI-inclusive benchmark summary](samples/roran-stronghammer/benchmark-summary.json).
 
-```text
-sharp choice_context --root data/career --args @context.json
-sharp document_create --root data/career --args @create.yaml
-```
-
-`context.json` contains `career_path`, `settings_path`, and `job` (posting text or URL).
-`create.yaml` wraps the request below under `request:`. Optional `choice_plan` and
-`provider` are sibling keys. `sources.json` contains `{"paths":["sources/resumes","sources/notes"]}`.
-
-Example request (inside `request:`):
-
-```yaml
-document_type: resume
-career_path: master.yaml
-settings_path: settings.local.yaml
-selection_path: selection.yaml
-job: "Paste the posting here, or use its URL."
-output_dir: outputs/my-application
-title: AI Engineer
-formats: [pdf]
-```
-
-Selection contains IDs, not copied career facts. Ask for relevant reserves as well as the strongest points: fitting can use the next point without another model request. URLs are cached; JavaScript-only or blocked pages may require pasting the posting.
+| Measured result | Observation |
+|---|---:|
+| AI-inclusive median per resume, three-worker run | 27.04s |
+| AI-inclusive median per resume, ten-worker run | 27.77s |
+| Ten-worker batch, all 30 completed including retries/operator pauses | 220.43s |
+| Ten-worker completed throughput | 8.2 resumes/minute |
+| Final PDFs passing recorded content/geometry checks | 30/30 in each run |
+| Page fill in the current 30-resume sample | 96-98.9% |
+| Recent local one-page formatting edit, median of five runs | 0.44s, no AI call |
+| Passing functionality tests | 89 |
+| Matching CLI/MCP operations | 21 |
 
-### Output folders
+The AI measurements are recorded historical runs using Codex ACP 2.2.2, `gpt-6-sol`, medium reasoning, and an existing Codex login. They include process/session startup, AI selection, fitting, PDF export, and automated checks. They start with ready career data and saved postings; collection, profile authoring, and human review are excluded. Ten workers made 33 inference attempts for 30 completed resumes. These are observations, not latency guarantees or measured human comparisons. Batch throughput is not individual response time.
 
-`output_dir` is explicit in the request; Sharp does not currently add dates or
-candidate folders automatically. For normal agent-created applications, use:
+The current gallery reuses earlier selections with an expanded sample profile; it was not freshly AI-tailored. Its [12.29-second refresh](samples/roran-stronghammer/refresh-timing.json) used **zero inference calls** and is not the basis for the headline. The 95% final skills-line target is not consistently achieved.
 
-```text
-outputs/YYYY-MM-DD/person-name/company-role/
-```
+Sharp is free MIT-licensed software. Agent subscriptions, usage limits, and optional API charges still apply. ATS-friendly means structured, checked output; no universal ATS score or hiring outcome is promised.
 
-That folder contains the PDF, optional requested formats, previews, selection,
-settings and checks. Reuse its path for edits. The demo and benchmark scripts
-use their own explicit paths. Outputs and local career/settings files remain
-Git-ignored; source, tests, defaults, documentation and fictional examples are
-versioned. Keep local ACP installations and the virtual environment ignored too.
+## Under the hood
 
-Optional provider configuration (the `provider` field in `create.yaml`):
+Approved career evidence + job -> agent choice -> validated constraints -> measured fit -> checked PDF + saved checkpoints.
 
-```yaml
-# Gateway routes generative models, Jev, or other decision models.
-kind: litellm
-base_url: http://localhost:4000
-model: your-configured-model
-mode: chat   # or decisions
-```
+Selection, facts, and formatting stay separate. Formatting edits reuse the saved choice; exports reuse the saved layout. Failed regeneration preserves the previous successful run. CLI and MCP expose the same typed operations.
 
-```text
-sharp document_create --root data/career --args @create.yaml
-```
-
-Credentials stay in environment variables, not career/settings files. Gateway inference may cost money. Missing provider cost is recorded as unknown, not zero. Decision models rank existing evidence; they do not write a summary or cover letter. The current decision route batches up to 128 bullet/skill/summary questions.
-
-For installed agents, install the agents extra and configure `kind: acp`, `command`, `args`, and `cwd`. Use the maintained `@agentclientprotocol/codex-acp` or `@agentclientprotocol/claude-agent-acp` adapter, not terminal-output parsing. Agent startup and inference are outside Sharp's local-render budget. Existing subscriptions remain subject to their own availability and limits.
-
-Profile links default to separate lines. Set `profile_separator: " | "` in local settings to place them together with natural wrapping; spaces, tabs, or another separator also work. Tabs expand to spaces. Each URL keeps its own click target in PDF, DOCX, and PPTX. Set it to `"\n"` to restore separate lines. This also works through `settings_update`.
-
-## Change things directly or through your agent
-
-There are two user-owned files:
-
-| File | Change here |
-|---|---|
-| `master.yaml` | Career facts, approved wording, proof, variants, supported skills, user confidence. |
-| `settings.local.yaml` | Fonts, colors, spacing, page limits, fill targets, section order, required/excluded points, item exceptions, selection instructions, custom functions. |
-
-`settings.example.yaml` initializes settings once. It is not merged again at runtime. Updating Sharp does not silently replace your local choices. Both personal files are ignored by Git.
-
-List settings are ordinary styles, not renderer constants:
-
-```yaml
-styles:
-  bullet:
-    marker: "•"
-    indent: 12          # Body text starts 12 points inside the margin.
-    marker_offset: 12   # Marker starts 12 points before the body text.
-    after: 4
-    bold: false
-    color: "#1A1A1A"
-```
-
-Wrapped lines align with the bullet body. To remove a marker, set it to an empty
-string; indentation is separately editable. Per-bullet exceptions use the same
-style fields. A marker that cannot fit its allotted offset produces an error.
-PDF output includes selectable marker text and L/LI/Lbl/LBody list tags; this is
-not a PDF/UA certification or a guarantee of interpretation by every ATS.
-Existing saved local settings are not silently upgraded to new defaults.
-
-Settings examples:
-
-```yaml
-page:
-  width: 612
-  height: 792
-  margins: [36, 40, 36, 40]  # top, right, bottom, left; points
-  max_pages: 2
-  fill_targets: [0.96, 0.90]
-constraints:
-  required: [my_strongest_point]
-  excluded: [old_project]
-  requires:
-    my_strongest_point: [supporting_point]
-```
-
-These are fragments to apply to the complete settings file, not extra configuration layers. Keep the rest of your initialized file.
-
-Global style edits preserve bullet exceptions. Your agent can explicitly apply a property everywhere, including exceptions, or remove one exception. IDs survive wording edits; missing references are reported. An impossible mandatory combination fails clearly rather than quietly dropping a point.
-
-## Add behavior without touching core code
-
-Tell your agent the outcome you want. It uses the MCP customization interface to add a named function with its purpose/comment, version, declared references, stage, and source. Functions live beside your settings and can be shared.
-
-| Stage | Receives | May return |
-|---|---|---|
-| Selection | Choice input and current plan | A revised choice plan using existing approved IDs. |
-| Before layout | Candidate blocks, settings, career, job, probe measurements | Style/range changes and additional content constraints. |
-| After layout | Final pages, positioned blocks and lines, settings, career, job | Text colors on placed blocks or ranges. |
-
-There is no special built-in “first line bold” option. Functions can work with general text ranges and measured lines. Formatting that changes dimensions belongs before fitting. Probe line ranges are not promises about final lines after changing fonts or weight. After-layout formatting cannot change dimensions; Sharp rejects it rather than entering a correction loop.
-
-Functions run once in stored order, each seeing the previous result. Later style changes win. Mandatory constraint contradictions fail. Errors name the function. Output validation is atomic.
-
-Restricted functions use JavaScript inside Extism, with no allowed filesystem paths, hosts, or privileged application callbacks. Install the rules extra plus `extism-js` and Binaryen only if you need functions. See [rules setup](docs/RULES.md). Compilation is an install/update step, not a render step. An enabled function requires a representative preview before activation; that is a smoke test, not proof for all possible inputs.
-
-Custom functions can compute within these contracts. A new exporter or a new layout capability requires an adapter/contract implementation. Sharp does not pretend a function signature makes every imaginable feature available.
-
-## User confidence, not fabricated certainty
-
-Each bullet may have `confidence: {level: high, note: "..."}`. This combines your firsthand depth/defendability and how prominently you want the work featured.
-
-The initial classes are very high, high, medium, low, and neutral/unrated. Definitions and order live in the master and are supplied verbatim to the chooser. You can define your own classes. An omitted assessment is unrated; neither import nor AI invents one.
-
-Relevance and explicit constraints come first. A very-high assessment does not make an unrelated project relevant. Factual support, wording approval, and provider confidence are separate. Meaningful claim or class-definition edits flag reassessment without silently changing your rating.
-
-## Edit, resume, export
-
-```text
-sharp run_inspect --args '{"directory":"outputs/my-application"}'
-sharp run_edit --args '{"directory":"outputs/my-application","settings_changes":{"styles.body.size":9.5}}'
-sharp run_export --args '{"directory":"outputs/my-application","format":"pptx"}'
-sharp run_export --args '{"directory":"outputs/my-application","format":"docx"}'
-```
-
-Formatting edits reuse the saved career and choice, rebuilding presentation from the revised settings. They do not run selection again. The base document is also saved for inspection. Exports reuse saved layout. Dedicated output folders are staged and replaced only after success, so failed regeneration preserves the previous complete run.
-
-PowerPoint has editable text at explicit line positions. Word is editable flow layout and can paginate differently; check it in Word before submitting. Fonts can differ across machines. PDF is the authoritative checked layout, not a guarantee about every ATS product.
-
-For a cover letter, use `document_type: cover_letter` and provide a grounded `letter_text` draft. It uses the same output pipeline. Nothing creates an unsolicited second document.
-
-## Connect your agent through MCP
-
-```text
-python -m pip install -e ".[mcp]"
-sharp mcp --root path/to/your/career-workspace
-```
-
-See [complete Codex and Claude Code registration commands](docs/SETUP.md#3-register-the-stdio-server-with-the-current-agent). Configure that command as a stdio MCP server in your agent. Start with `contracts_describe` for an index, then request only the contracts needed. The server can initialize a workspace, extract material, inspect/propose/apply career revisions, record explicit user assessments, create/edit/export documents, and manage/share settings and functions. File operations are scoped to its configured workspace. Customization runtime restrictions apply separately from MCP's trusted local file tools.
-
-The three [skills](skills/) explain career import/update, resume creation, and cover-letter creation. They are deliberately short. Your agent can create both documents by invoking the two document workflows; there is no separate pair framework.
-
-## Develop and test
-
-```text
-python -m pip install -e ".[test,preview,office,mcp,rules,agents]"
-python -m pytest
-python scripts/build_docs.py
-python scripts/benchmark.py
-```
-
-Set `SHARP_RULE_COMPILER` to the installed compiler and put Binaryen's executables on PATH to include real sandbox tests. Without that opt-in those tests explicitly skip; the basic suite never silently treats a fake runtime as real isolation.
-
-Contracts and functionality tests come first. Keep core career/selection/layout independent of vendors; `workflow.py` is outer file/run orchestration and `service.py` composes adapters. No imports from the old resume applications. Tests must not be weakened to accommodate broken implementation.
-
-Run `scripts/benchmark.py` to measure local fitting, generation and edits on your machine. Local measurements exclude model inference; report those stages separately.
-
-Sharp's software is open source. Your master, settings, evidence, credentials, run folders, and caches are local and ignored. Review a portable settings copy before sharing: custom source and comments are user-authored text and can themselves contain private information.
+[Architecture](docs/architecture.svg) | [Contracts](docs/CONTRACTS.md) | [Validation](docs/VALIDATION.md) | [Custom rules](docs/RULES.md) | [Agent skills](skills/) | [Developer and usage guide](docs/USAGE.md)
