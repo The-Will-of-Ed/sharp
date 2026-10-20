@@ -88,8 +88,13 @@ def main():
                     if a.format == "pdf"
                 ),
                 "no_layout_issues": not result.layout.issues,
-                "fictional_disclosure": any(
-                    "FICTIONAL BENCHMARK" in p.block.text for p in result.layout.placed
+                "education_present": sum(
+                    p.block.kind == "education" for p in result.layout.placed
+                ) == len(career.education),
+                "clean_presentation": not any(
+                    token in p.block.text.lower()
+                    for p in result.layout.placed
+                    for token in ("fictional", "example.com", "benchmark")
                 ),
             }
             report = dict(
