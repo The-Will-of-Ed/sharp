@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1040" viewBox="0 0 1500 1040">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#566573"/></marker></defs>
+<rect width="1500" height="1040" fill="#f7f9fc"/>
+<g font-family="Arial,sans-serif" fill="#172b40" font-weight="400">
+<text x="45" y="48" font-size="30">Sharp: evidence to document, with changes kept separate</text>
+<text x="45" y="78" font-size="18">One local application. Plain function contracts. Vendor implementations stay outside the core.</text>
+<rect x="45" y="110" width="435" height="175" rx="10" fill="#e9f1ff" stroke="#9cb8e5"/>
+<text x="65" y="142" font-size="23">master.yaml: WHAT you can say</text>
+<text x="65" y="171" font-size="17">JSON Resume core + x_resume</text>
+<text x="65" y="199" font-size="17">Stable IDs, approved bullets, evidence, qualifiers</text>
+<text x="65" y="227" font-size="17">Supported skills, variants, summaries</text>
+<text x="65" y="255" font-size="17">User confidence: class + definition + optional note</text>
+<rect x="535" y="110" width="435" height="175" rx="10" fill="#fff2dc" stroke="#dcb56a"/>
+<text x="555" y="142" font-size="23">settings.local.yaml: HOW it behaves</text>
+<text x="555" y="171" font-size="17">Page count, fill, fonts, spacing, section order</text>
+<text x="555" y="199" font-size="17">Required/excluded IDs, dependencies, exceptions</text>
+<text x="555" y="227" font-size="17">Editable choice instructions and named functions</text>
+<text x="555" y="255" font-size="17">One complete file. No hidden configuration layers.</text>
+<rect x="1025" y="110" width="430" height="175" rx="10" fill="#e8f5ed" stroke="#91bea0"/>
+<text x="1045" y="142" font-size="23">CLI / MCP / your current agent</text>
+<text x="1045" y="171" font-size="17">CreateRequest: sources, job, formats, destination</text>
+<text x="1045" y="199" font-size="17">Describe, inspect, propose, approve, edit, export</text>
+<text x="1045" y="227" font-size="17">Functions: name, purpose, version, refs, source</text>
+<text x="1045" y="255" font-size="17">Your agent changes local data, not core code.</text>
+<g stroke="#566573" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M262 285 V320 H750 V344"/><path d="M752 285 V344"/><path d="M1240 285 V320 H750"/></g>
+<rect x="45" y="345" width="1410" height="265" rx="12" fill="white" stroke="#9daabd"/>
+<text x="65" y="379" font-size="23">Pure core: career validation + selection validation + formatting + deterministic fitting</text>
+<rect x="65" y="400" width="310" height="180" rx="8" fill="#e9f1ff"/>
+<text x="82" y="429" font-size="21">1. Choose</text>
+<text x="82" y="459" font-size="16">ChoiceInput -&gt; ChoicePlan</text>
+<text x="82" y="487" font-size="16">Ranked IDs and reserves, skills, summary</text>
+<text x="82" y="515" font-size="16">Optional reasons / native model certainty</text>
+<text x="82" y="548" font-size="16">One call, or submit your agent's plan.</text>
+<rect x="420" y="400" width="305" height="180" rx="8" fill="#fff2dc"/>
+<text x="437" y="429" font-size="21">2. Format before layout</text>
+<text x="437" y="459" font-size="16">BeforeInput -&gt; Changes</text>
+<text x="437" y="487" font-size="16">Blocks + context + probe measurements</text>
+<text x="437" y="515" font-size="16">Style/range patches and constraints</text>
+<text x="437" y="548" font-size="16">Dimension changes happen here.</text>
+<rect x="770" y="400" width="305" height="180" rx="8" fill="#e8f5ed"/>
+<text x="787" y="429" font-size="21">3. Measure and fit</text>
+<text x="787" y="459" font-size="16">Blocks + metrics + plan -&gt; Layout</text>
+<text x="787" y="487" font-size="16">Exact lines, coordinates, page count</text>
+<text x="787" y="515" font-size="16">Remaining width/height + fill + issues</text>
+<text x="787" y="548" font-size="16">No AI. No invented filler.</text>
+<rect x="1120" y="400" width="315" height="180" rx="8" fill="#f1eaff"/>
+<text x="1137" y="429" font-size="21">4. Paint after layout</text>
+<text x="1137" y="459" font-size="16">AfterInput -&gt; Decorations</text>
+<text x="1137" y="487" font-size="16">Final positions and measured text ranges</text>
+<text x="1137" y="515" font-size="16">Color only: no size, weight, or spacing</text>
+<text x="1137" y="548" font-size="16">Reject resizing; no correction loops.</text>
+<g stroke="#566573" stroke-width="2" marker-end="url(#arrow)"><path d="M375 490 H415"/><path d="M725 490 H765"/><path d="M1075 490 H1115"/></g>
+<g stroke="#566573" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M220 610 V659"/><path d="M750 610 V659"/><path d="M1265 610 V659"/></g>
+<rect x="45" y="660" width="435" height="168" rx="10" fill="#e9f1ff" stroke="#9cb8e5"/>
+<text x="65" y="693" font-size="23">AI adapter: choose / write</text>
+<text x="65" y="724" font-size="17">Current agent | maintained ACP | LiteLLM</text>
+<text x="65" y="753" font-size="17">Decision models choose; generators can draft.</text>
+<text x="65" y="782" font-size="17">Rewriting is a separate, reviewed proposal.</text>
+<text x="65" y="810" font-size="17">No provider-specific objects enter core.</text>
+<rect x="535" y="660" width="435" height="168" rx="10" fill="#fff2dc" stroke="#dcb56a"/>
+<text x="555" y="693" font-size="23">Rule adapter: restricted execution</text>
+<text x="555" y="724" font-size="17">JavaScript source in settings -&gt; cached Wasm</text>
+<text x="555" y="753" font-size="17">No filesystem / network / core mutation</text>
+<text x="555" y="782" font-size="17">Bounded runtime. Validated returned changes.</text>
+<text x="555" y="810" font-size="17">Compile on install/update, not on render.</text>
+<rect x="1025" y="660" width="430" height="168" rx="10" fill="#e8f5ed" stroke="#91bea0"/>
+<text x="1045" y="693" font-size="23">Export adapter: Layout -&gt; Artifact</text>
+<text x="1045" y="724" font-size="17">PDF by default; PPTX / DOCX opt-in</text>
+<text x="1045" y="753" font-size="17">Absolute path + format + actual checks</text>
+<text x="1045" y="782" font-size="17">PDF and measurement share font metrics.</text>
+<text x="1045" y="810" font-size="17">Word can reflow; check it before submission.</text>
+<rect x="45" y="865" width="1410" height="135" rx="10" fill="white" stroke="#9daabd"/>
+<text x="65" y="898" font-size="23">Saved run: resume at the stage you need</text>
+<text x="65" y="930" font-size="18">Career + selection + base document + settings + layout + decisions + stage timings + artifacts</text>
+<text x="65" y="962" font-size="18">Formatting edit: reuse selection. Export edit: reuse layout. Failed generation: preserve the previous complete run.</text>
+<text x="65" y="987" font-size="15">All field types, required/optional status, meanings and reasons: docs/CONTRACTS.md and contracts_describe.</text>
+</g></svg>

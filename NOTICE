@@ -1,0 +1,7 @@
+Sharp vendors the JSON Resume v1.0.0 schema from:
+https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json
+
+JSON Resume schema is MIT licensed. Its upstream license is retained in
+src/sharp/defaults/jsonresume.LICENSE.txt.
+
+Optional integrations retain their own licenses and installation terms.

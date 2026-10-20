@@ -1,0 +1,8 @@
+version: 1
+provider: user
+ranked:
+  - {candidate_id: example_delivery}
+  - {candidate_id: example_validation}
+  - {candidate_id: example_search}
+summary_id: example_summary
+skill_ids: [python, sql, api, testing, git]

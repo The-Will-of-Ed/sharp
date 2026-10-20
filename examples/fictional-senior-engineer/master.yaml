@@ -1,0 +1,1173 @@
+basics:
+  name: Morgan Ellis
+  label: Senior Software Engineer | FICTIONAL BENCHMARK
+  email: morgan.ellis@example.com
+  url: https://example.com/morgan-ellis
+work:
+- x_id: harbor
+  name: Harborline Commerce
+  position: Senior Software Engineer
+  startDate: 2023-06
+- x_id: pine
+  name: Pinecrest Freight Systems
+  position: Software Engineer II
+  startDate: 2020-03
+  endDate: 2023-05
+- x_id: ibm
+  name: IBM
+  position: Software Engineer
+  startDate: 2018-01
+  endDate: 2020-02
+- x_id: alder
+  name: Aldercrest Digital
+  position: Junior Software Engineer
+  startDate: 2017-06
+  endDate: 2017-12
+projects:
+- x_id: incident_assistant
+  name: Incident-summary prototype
+- x_id: support_classifier
+  name: Support-ticket routing experiment
+- x_id: feature_store
+  name: Feature snapshot service
+- x_id: vector_playground
+  name: Semantic-search experiment
+- x_id: load_lab
+  name: Queue-behavior load lab
+- x_id: flag_service
+  name: Feature-flag service
+- x_id: package_checker
+  name: Dependency-review tool
+- x_id: accessibility_kit
+  name: Accessible-components study
+- x_id: collab_notes
+  name: Shared meeting notes
+- x_id: calendar_api
+  name: Calendar-integration service
+- x_id: cost_dashboard
+  name: Cloud-cost explorer
+- x_id: game_server
+  name: Multiplayer game server
+- x_id: image_browser
+  name: Photo-library experiment
+- x_id: recipe_app
+  name: Recipe planning app
+education:
+- institution: Lakeview Institute of Technology (fictional)
+  studyType: B.S.
+  area: Computer Science
+  endDate: '2017'
+volunteer: []
+certificates: []
+awards: []
+publications: []
+skills: []
+languages: []
+interests: []
+references: []
+x_resume:
+  version: 1
+  bullets:
+  - id: harbor_payments
+    owner_id: harbor
+    text: Designed Java/Spring Boot payment reconciliation services processing 180,000
+      daily events; added idempotency keys and replay protection to prevent duplicate
+      ledger entries.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_java
+    - sk_spring
+    - sk_postgres
+    - sk_kafka
+    - sk_distributed
+    - sk_testing
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: harbor_api_latency
+    owner_id: harbor
+    text: Reduced checkout API p95 latency from 420 to 260 ms by tracing slow PostgreSQL
+      queries, adding targeted indexes, and moving repeated lookups into Redis.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_java
+    - sk_postgres
+    - sk_redis
+    - sk_otel
+    - sk_performance
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: harbor_merchant_ui
+    owner_id: harbor
+    text: Led a three-engineer React/TypeScript merchant dashboard redesign with product
+      and support; reduced support requests about settlement status by 24% over the
+      next quarter.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_react
+    - sk_typescript
+    - sk_collaboration
+    - sk_leadership
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: harbor_accessibility
+    owner_id: harbor
+    text: Added keyboard navigation, focus management, and accessible form errors
+      to merchant onboarding; introduced axe checks in Playwright regression tests.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_react
+    - sk_typescript
+    - sk_accessibility
+    - sk_playwright
+    - sk_testing
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: harbor_event_delivery
+    owner_id: harbor
+    text: Designed Kafka retry and dead-letter handling for order events, documenting
+      ordering and delivery guarantees and adding safe replay tools for support engineers.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_kafka
+    - sk_distributed
+    - sk_reliability
+    - sk_documentation
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: harbor_observability
+    owner_id: harbor
+    text: Instrumented six backend services with OpenTelemetry and Prometheus; created
+      Grafana dashboards and runbooks that reduced median incident diagnosis from
+      42 to 27 minutes.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_otel
+    - sk_prometheus
+    - sk_grafana
+    - sk_reliability
+    - sk_documentation
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: harbor_identity
+    owner_id: harbor
+    text: Integrated OIDC single sign-on and tenant-scoped authorization for business
+      accounts; added audit events and negative permission tests with the security
+      team.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_oidc
+    - sk_security
+    - sk_testing
+    - sk_collaboration
+    - sk_java
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: harbor_mentoring
+    owner_id: harbor
+    text: Mentored two engineers through design reviews and on-call onboarding; introduced
+      short architecture decision records for cross-team API changes.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_leadership
+    - sk_documentation
+    - sk_collaboration
+    - sk_architecture
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: harbor_sdk
+    owner_id: harbor
+    text: Published a versioned TypeScript client SDK from OpenAPI contracts, adding
+      compatibility tests and migration examples for four internal application teams.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_typescript
+    - sk_openapi
+    - sk_testing
+    - sk_documentation
+    - sk_developer_experience
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: harbor_delivery
+    owner_id: harbor
+    text: Led a phased Java service migration with feature flags, canary releases,
+      and rollback rehearsals; moved five services without a customer-visible outage
+      during the migration.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_java
+    - sk_cicd
+    - sk_kubernetes
+    - sk_reliability
+    - sk_architecture
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: harbor_search
+    owner_id: harbor
+    text: Built OpenSearch-backed merchant order search with filtered queries and
+      pagination; worked with support staff to validate relevance against 120 recurring
+      lookup tasks.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_opensearch
+    - sk_java
+    - sk_search
+    - sk_collaboration
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: harbor_privacy
+    owner_id: harbor
+    text: Implemented retention jobs and export/delete workflows for customer records,
+      with audit logs and legal-reviewed retention rules across three application
+      databases.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_postgres
+    - sk_privacy
+    - sk_security
+    - sk_python
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pine_tracking
+    owner_id: pine
+    text: Developed Go/gRPC shipment-tracking services handling 35,000 updates per
+      minute at peak; added backpressure and bounded retries for unreliable carrier
+      feeds.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_go
+    - sk_grpc
+    - sk_distributed
+    - sk_reliability
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pine_streaming
+    owner_id: pine
+    text: Built Kafka ingestion with schema validation and deduplication for 14 carrier
+      feeds; added replayable S3 archives and dashboards for delayed or malformed
+      events.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_kafka
+    - sk_aws
+    - sk_s3
+    - sk_data_engineering
+    - sk_testing
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pine_analytics
+    owner_id: pine
+    text: Built Python/SQL ingestion into a warehouse for shipment-delay analysis;
+      introduced data-quality checks and cut daily dataset preparation from 75 to
+      25 minutes.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_python
+    - sk_sql
+    - sk_data_engineering
+    - sk_analytics
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pine_kubernetes
+    owner_id: pine
+    text: Containerized four services with Docker and deployed them to Kubernetes
+      using Terraform-managed AWS infrastructure; documented resource limits and deployment
+      recovery.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_docker
+    - sk_kubernetes
+    - sk_terraform
+    - sk_aws
+    - sk_documentation
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pine_ci
+    owner_id: pine
+    text: Cut CI feedback from 18 to 7 minutes by separating unit and integration
+      suites and reusing dependency artifacts in GitHub Actions.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_cicd
+    - sk_testing
+    - sk_git
+    - sk_developer_experience
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pine_contracts
+    owner_id: pine
+    text: Introduced REST/gRPC contract tests and synthetic carrier fixtures, catching
+      incompatible payload changes before release across three partner integrations.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_grpc
+    - sk_rest
+    - sk_testing
+    - sk_python
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pine_oncall
+    owner_id: pine
+    text: Rotated primary on-call for shipment services; investigated queue lag and
+      database saturation, wrote incident reviews, and added actionable SLO-based
+      alerts.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_reliability
+    - sk_prometheus
+    - sk_postgres
+    - sk_documentation
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pine_frontend
+    owner_id: pine
+    text: Shipped a React operations map with live shipment updates over WebSockets,
+      working with dispatchers to make late shipments easier to locate.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_react
+    - sk_typescript
+    - sk_websocket
+    - sk_collaboration
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pine_database
+    owner_id: pine
+    text: Partitioned growing PostgreSQL event tables and introduced scheduled archival;
+      reduced a key reporting query from 11 to 3 seconds on the team's load-test dataset.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_postgres
+    - sk_sql
+    - sk_performance
+    - sk_data_engineering
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pine_roadmap
+    owner_id: pine
+    text: Partnered with operations leads to prioritize a quarterly integration roadmap,
+      splitting large carrier requests into independently releasable API changes.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_collaboration
+    - sk_architecture
+    - sk_rest
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: ibm_enterprise
+    owner_id: ibm
+    text: Developed Java/Spring REST APIs for an enterprise service-management application,
+      implementing request validation, pagination, and structured error responses.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_java
+    - sk_spring
+    - sk_rest
+    - sk_testing
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: ibm_migration
+    owner_id: ibm
+    text: Migrated two scheduled batch jobs to Python services with PostgreSQL checkpoints,
+      reducing duplicate processing and making failed batches restartable.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_python
+    - sk_postgres
+    - sk_reliability
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: ibm_tests
+    owner_id: ibm
+    text: Added JUnit integration tests and API regression checks to Jenkins builds;
+      reproduced and fixed race conditions in concurrent update flows.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_java
+    - sk_testing
+    - sk_cicd
+    - sk_distributed
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: ibm_support
+    owner_id: ibm
+    text: Investigated production defects with application-support teams, adding structured
+      logs and practical troubleshooting notes for recurring issues.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_documentation
+    - sk_collaboration
+    - sk_reliability
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: ibm_auth
+    owner_id: ibm
+    text: Integrated an existing OAuth2 provider into internal APIs and tested expired-token
+      and unauthorized-access behavior.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_security
+    - sk_oidc
+    - sk_java
+    - sk_testing
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: ibm_docker
+    owner_id: ibm
+    text: Maintained Docker development environments and Maven dependency upgrades,
+      helping new developers reproduce service behavior locally.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_docker
+    - sk_java
+    - sk_developer_experience
+    - sk_git
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: alder_web
+    owner_id: alder
+    text: Built responsive React pages and Node.js REST endpoints for two small-business
+      websites, translating designer mockups into tested reusable components.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_react
+    - sk_javascript
+    - sk_node
+    - sk_rest
+    - sk_testing
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: alder_sql
+    owner_id: alder
+    text: Implemented SQL reporting queries and CSV exports for an appointment-booking
+      application, validating results against the existing spreadsheet process.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_sql
+    - sk_postgres
+    - sk_analytics
+    - sk_testing
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: alder_quality
+    owner_id: alder
+    text: Fixed cross-browser layout and form-validation defects and added Jest tests
+      for shared JavaScript utilities.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_javascript
+    - sk_testing
+    - sk_accessibility
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pr_incident_assistant
+    owner_id: incident_assistant
+    text: Built a Python prototype that drafts incident summaries from redacted logs
+      using an LLM API; evaluated factual consistency on 40 synthetic incidents and
+      required human review before use.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_python
+    - sk_llm
+    - sk_evaluation
+    - sk_privacy
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pr_support_classifier
+    owner_id: support_classifier
+    text: Compared TF-IDF/logistic regression with sentence embeddings for routing
+      synthetic support tickets; reached macro-F1 0.84 on a held-out 800-ticket test
+      set.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_python
+    - sk_sklearn
+    - sk_embeddings
+    - sk_evaluation
+    - sk_analytics
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pr_feature_store
+    owner_id: feature_store
+    text: Built a small Python feature snapshot service with Parquet/DuckDB datasets
+      and timestamp-based joins to demonstrate reproducible offline training data.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_python
+    - sk_data_engineering
+    - sk_sql
+    - sk_testing
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pr_vector_playground
+    owner_id: vector_playground
+    text: Built a local semantic-search demo for a public book catalog using sentence-transformer
+      embeddings and pgvector; compared retrieval quality against PostgreSQL full-text
+      search on 60 hand-labeled queries.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_python
+    - sk_embeddings
+    - sk_vector
+    - sk_search
+    - sk_evaluation
+    - sk_postgres
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pr_load_lab
+    owner_id: load_lab
+    text: Created a Go load generator to compare queue backpressure and retry policies;
+      published reproducible latency and throughput plots with Docker Compose examples.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_go
+    - sk_distributed
+    - sk_performance
+    - sk_docker
+    - sk_documentation
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pr_flag_service
+    owner_id: flag_service
+    text: Built a Go feature-flag service with percentage rollouts, tenant targeting,
+      and an audit trail; tested concurrent reads and used Redis for configuration
+      distribution.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_go
+    - sk_redis
+    - sk_testing
+    - sk_architecture
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pr_package_checker
+    owner_id: package_checker
+    text: Built a TypeScript CLI that checks package license metadata and flags newly
+      introduced dependencies in pull requests; added GitHub Actions integration and
+      fixture-based tests.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_typescript
+    - sk_node
+    - sk_cicd
+    - sk_developer_experience
+    - sk_testing
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pr_accessibility_kit
+    owner_id: accessibility_kit
+    text: Created a React component library with keyboard-tested dialogs and forms,
+      Storybook examples, and Playwright accessibility checks for a volunteer community
+      site.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_react
+    - sk_typescript
+    - sk_accessibility
+    - sk_playwright
+    - sk_testing
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pr_collab_notes
+    owner_id: collab_notes
+    text: Built a small collaborative notes app using React, Node.js, and WebSockets;
+      implemented reconnect handling and optimistic edits for a five-person study
+      group.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_react
+    - sk_node
+    - sk_websocket
+    - sk_typescript
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pr_calendar_api
+    owner_id: calendar_api
+    text: Built a Node.js scheduling integration with OAuth2, webhook signature validation,
+      and retries; documented setup and rate-limit behavior for a volunteer organization.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_node
+    - sk_rest
+    - sk_security
+    - sk_documentation
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pr_cost_dashboard
+    owner_id: cost_dashboard
+    text: Built a Python/SQL dashboard over sample AWS billing exports, grouping spending
+      by service and owner and adding budget-threshold notifications.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_python
+    - sk_sql
+    - sk_aws
+    - sk_analytics
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pr_game_server
+    owner_id: game_server
+    text: Implemented an experimental Go multiplayer lobby with WebSocket sessions,
+      connection timeouts, and load tests for 300 simulated clients.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_go
+    - sk_websocket
+    - sk_testing
+    - sk_distributed
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pr_image_browser
+    owner_id: image_browser
+    text: Built a browser photo organizer with React and local IndexedDB storage;
+      added thumbnail virtualization and keyboard navigation for a 5,000-photo test
+      collection.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_react
+    - sk_javascript
+    - sk_accessibility
+    - sk_performance
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  - id: pr_recipe_app
+    owner_id: recipe_app
+    text: Built a React/Node.js recipe planner with PostgreSQL persistence, ingredient
+      filters, and automated API tests for a small group of friends.
+    kind: achievement
+    evidence_ids:
+    - fictional_scenario
+    skill_ids:
+    - sk_react
+    - sk_node
+    - sk_postgres
+    - sk_rest
+    - sk_testing
+    qualifiers: []
+    approval: approved
+    confidence:
+      level: unrated
+    variants: []
+  evidence:
+  - id: fictional_scenario
+    kind: synthetic_fixture
+    source: Entirely fictional benchmark fixture. Not a real candidate, employment
+      record, or verified performance claim.
+  skills:
+  - id: sk_java
+    name: Java
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_spring
+    name: Spring Boot
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_python
+    name: Python
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_go
+    name: Go
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_typescript
+    name: TypeScript
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_javascript
+    name: JavaScript
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_react
+    name: React
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_node
+    name: Node.js
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_postgres
+    name: PostgreSQL
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_sql
+    name: SQL
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_redis
+    name: Redis
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_kafka
+    name: Kafka
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_grpc
+    name: gRPC
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_rest
+    name: REST APIs
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_aws
+    name: AWS
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_s3
+    name: Amazon S3
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_docker
+    name: Docker
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_kubernetes
+    name: Kubernetes
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_terraform
+    name: Terraform
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_cicd
+    name: CI/CD
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_git
+    name: Git
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_testing
+    name: Automated testing
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_playwright
+    name: Playwright
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_accessibility
+    name: Web accessibility
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_otel
+    name: OpenTelemetry
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_prometheus
+    name: Prometheus
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_grafana
+    name: Grafana
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_oidc
+    name: OAuth2/OIDC
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_security
+    name: Application security
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_privacy
+    name: Data retention and privacy
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_distributed
+    name: Distributed systems
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_reliability
+    name: On-call and SLOs
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_performance
+    name: Performance profiling
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_documentation
+    name: Technical documentation
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_leadership
+    name: Mentoring and design reviews
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_architecture
+    name: Service architecture
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_collaboration
+    name: Cross-functional delivery
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_openapi
+    name: OpenAPI
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_developer_experience
+    name: Developer tooling
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_opensearch
+    name: OpenSearch
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_search
+    name: Search relevance
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_data_engineering
+    name: Data pipelines
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_analytics
+    name: Data analysis
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  - id: sk_llm
+    name: LLM integration
+    evidence_ids:
+    - fictional_scenario
+    context: project
+  - id: sk_evaluation
+    name: Model and retrieval evaluation
+    evidence_ids:
+    - fictional_scenario
+    context: project
+  - id: sk_sklearn
+    name: scikit-learn
+    evidence_ids:
+    - fictional_scenario
+    context: project
+  - id: sk_embeddings
+    name: Embeddings
+    evidence_ids:
+    - fictional_scenario
+    context: project
+  - id: sk_vector
+    name: pgvector
+    evidence_ids:
+    - fictional_scenario
+    context: project
+  - id: sk_websocket
+    name: WebSockets
+    evidence_ids:
+    - fictional_scenario
+    context: work
+  summaries:
+  - id: sum_backend
+    text: Software engineer with nine years building and operating backend services,
+      event pipelines, and customer-facing products. Leads practical design decisions,
+      mentors teammates, and follows systems through deployment and on-call support.
+    evidence_ids:
+    - fictional_scenario
+    approval: approved
+  - id: sum_fullstack
+    text: Software engineer with nine years across Java/Go services and React/TypeScript
+      applications. Connects customer workflows to reliable APIs, accessible interfaces,
+      and tested production releases.
+    evidence_ids:
+    - fictional_scenario
+    approval: approved
+  - id: sum_platform
+    text: Software engineer with nine years improving service reliability, deployment
+      workflows, and data platforms. Builds maintainable distributed services and
+      tools that help application teams ship and diagnose software.
+    evidence_ids:
+    - fictional_scenario
+    approval: approved
+  - id: sum_ai
+    text: Software engineer with production backend and data-pipeline experience plus
+      independent experiments in LLM integration, embeddings, and retrieval evaluation.
+      Brings service design, testing, and operational discipline to applied AI work.
+    evidence_ids:
+    - fictional_scenario
+    approval: approved
+  confidence_levels:
+  - id: very_high
+    label: Very high
+    definition: Deep firsthand knowledge of decisions, tradeoffs, and results; strongly
+      prefer featuring where relevant.
+    order: 0
+  - id: high
+    label: High
+    definition: Can clearly explain personal contribution and results; prefer prominent
+      use where relevant.
+    order: 1
+  - id: medium
+    label: Medium
+    definition: Can discuss the work with some preparation; prefer supporting use.
+    order: 2
+  - id: low
+    label: Low
+    definition: Limited depth or low preference for emphasis; avoid centering unless
+      specifically appropriate.
+    order: 3
+  - id: unrated
+    label: Unrated
+    definition: No user assessment supplied. Neutral, not low confidence.
+    order: 4

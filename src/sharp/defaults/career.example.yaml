@@ -1,0 +1,58 @@
+basics:
+  name: Alex Example
+  label: Software Engineer
+  email: alex@example.com
+  phone: +1 555 010 0123
+  profiles:
+    - network: GitHub
+      url: https://github.com/example
+work:
+  - x_id: example_work
+    name: Example Systems
+    position: Software Engineer
+    startDate: '2022-01'
+    endDate: '2025-12'
+projects:
+  - x_id: example_project
+    name: Documentation search prototype
+education:
+  - institution: Example University
+    studyType: BS
+    area: Computer Science
+x_resume:
+  version: 1
+  evidence:
+    - id: example_account
+      kind: user_attested
+      source: Synthetic example only. Replace with your actual career evidence.
+  skills:
+    - {id: python, name: Python, evidence_ids: [example_account], context: work}
+    - {id: sql, name: SQL, evidence_ids: [example_account], context: work}
+    - {id: api, name: REST APIs, evidence_ids: [example_account], context: work}
+    - {id: testing, name: Software testing, evidence_ids: [example_account], context: work}
+    - {id: git, name: Git, evidence_ids: [example_account], context: work}
+  summaries:
+    - id: example_summary
+      text: I turn ambiguous requirements into reliable software, working with users from the first question through delivery.
+      approval: approved
+      evidence_ids: [example_account]
+  bullets:
+    - id: example_delivery
+      owner_id: example_work
+      text: Delivered a Python service that reduced manual review by 70%, working with operations users to define and validate the workflow.
+      approval: approved
+      evidence_ids: [example_account]
+      skill_ids: [python, api]
+      confidence: {level: unrated}
+    - id: example_validation
+      owner_id: example_work
+      text: Designed reusable SQL validation and automated regression checks for recurring customer-data imports.
+      approval: approved
+      evidence_ids: [example_account]
+      skill_ids: [sql, testing, git]
+    - id: example_search
+      owner_id: example_project
+      text: Technical answers were scattered across documents. Built a search prototype that linked answers to their source passages for review.
+      approval: approved
+      evidence_ids: [example_account]
+      skill_ids: [python]

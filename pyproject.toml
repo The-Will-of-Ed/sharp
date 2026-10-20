@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sharp-resume"
+version = "0.1.0"
+description = "Local-first, evidence-backed resumes with deterministic fitting"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = ["pydantic>=2.10,<3", "PyYAML>=6,<7", "reportlab>=4,<5", "pypdf>=5,<7", "jsonschema>=4,<5"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "PyMuPDF>=1.25,<2", "jsonschema>=4", "python-pptx>=1,<2", "python-docx>=1.2,<2", "mcp>=2.3,<3"]
+office = ["python-pptx>=1,<2", "python-docx>=1.2,<2"]
+preview = ["PyMuPDF>=1.25,<2"]
+mcp = ["mcp>=2.3,<3"]
+agents = ["agent-client-protocol>=0.12,<1"]
+rules = ["extism==1.1.1", "tree-sitter>=0.25,<0.27", "tree-sitter-javascript>=0.25,<0.26"]
+
+[project.scripts]
+sharp = "sharp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+sharp = ["defaults/*.yaml", "defaults/*.json", "defaults/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
