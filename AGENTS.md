@@ -1,5 +1,7 @@
 # Sharp
 
+For user setup and first use, follow `docs/SETUP.md`. Read the matching skill in `skills/` for career import, resume creation or cover letters. The current agent reasons; Sharp MCP/CLI validates and handles files. Setup is not complete until MCP tool discovery and workspace inspection succeed. Preserve existing local data and agent configuration.
+
 Sharp is standalone. Do not import app or resume2. Existing personal master files are outside its scope.
 
 Core modules may import contracts and other core modules, never adapters or vendor SDKs. The entry point composes adapters. Keep explicit function dependencies and small modules.

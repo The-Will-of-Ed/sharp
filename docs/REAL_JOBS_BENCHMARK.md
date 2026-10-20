@@ -1,12 +1,14 @@
 # One career. Thirty real jobs.
 
+This document records the original historical run with Morgan Ellis. The current generator and reusable fixture now use Roran StrongHammer with six employment records and two education records. Rerunning the current scripts therefore uses different input. Older generated output folders were intentionally removed; their raw run artifacts are not distributed with this repository. The current portable gallery, saved jobs, selections and no-inference refresh timings are under `samples/roran-stronghammer/`.
+
 This is a selection and generation demonstration with a wholly invented person,
 not a candidate success story. No personal resume data is used. Morgan Ellis has
 nine years across four fictional employment records, including an explicitly
 fictional IBM role. Smaller employers and the educational institution are made
 up. The source contains 31 work achievements, 14 projects, 49 skills and four
-approved summaries. The reusable sample is in
-`examples/fictional-senior-engineer/master.yaml`.
+approved summaries. The current successor sample is in
+`examples/fictional-senior-engineer/master.yaml`; it differs from this original fixture.
 
 Thirty distinct employer-published jobs were collected on October 20, 2026 from
 Google, Amazon, Apple, Stripe, Airbnb, Figma, Cloudflare, Reddit, Discord,
@@ -99,6 +101,5 @@ The ACP adapter is installed separately; do not install a new Codex CLI.
    regenerate resumes.
 
 Outputs are under `outputs/real-jobs-30/` and remain Git-ignored. The share folder
-excludes machine paths and private agent logs. The full local run records are
-retained for diagnostics. The benchmark scripts are outside the production
+excludes machine paths and private agent logs. A new run produces local records for diagnostics; the original historical records are not shipped. The benchmark scripts are outside the production
 domain, layout and adapter layers.

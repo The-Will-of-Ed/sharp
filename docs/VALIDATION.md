@@ -60,3 +60,12 @@ first-word extraction on the same line, optional native Office list metadata,
 and explicit regular/marker-free overrides. Career wording remains unchanged.
 The authoritative one-page fictional preview was visually inspected after export.
 A separate layering review found no blocking ownership or dependency issue.
+
+
+## October 20, 2026: agent setup and multi-source import
+
+- Added Windows and macOS/Linux environment and MCP registration instructions, with a Claude entry file and explicit agent-first setup directions.
+- A real stdio MCP test imports PDF and DOCX documents from multiple folders, saves a reviewed consolidated master through `career_replace`, creates a PDF from a supplied choice plan without model inference, and rejects a stale career revision. CLI folder extraction is covered in the same test. Consolidation is supplied as a reviewed agent/user proposal, not claimed as an automatic extraction feature.
+- The complete suite passed: 75 tests, including the enabled restricted-runtime checks.
+- A new isolated Python 3.14 virtual environment installed the package using standard pip with preview, office, MCP and test extras. The real MCP discovery/workspace-scope test and multi-source import-to-PDF test both passed there, without ACP or custom-rule extras. This checks a fresh dependency-range install separately from the existing locked development environment.
+- Codex registration syntax was verified against the installed CLI and official documentation. Claude registration syntax was checked against official documentation; no live Claude Code host was available. The exercise did not alter the developer's MCP registrations or call an LLM to evaluate interpretation quality.

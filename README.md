@@ -8,6 +8,10 @@ Sharp is local-first. It keeps your facts, selection, formatting, and exports se
 
 Open [30 sample resumes and saved job postings](samples/roran-stronghammer/index.html). The gallery includes previews, PDFs, the full career inventory, job snapshots and a ZIP download. [Publishing instructions](samples/roran-stronghammer/README.md) explain GitHub Pages setup for The-Will-of-Ed/sharp.
 
+## Let your agent set it up
+
+Open this folder in Codex or Claude Code and ask it to follow [the complete setup guide](docs/SETUP.md). It installs a local environment, registers the MCP server, verifies tool access, and follows the import skill to turn one or several resumes/folders into a reviewed master. The guide includes Windows and macOS/Linux commands; no separate model/API key is required for that route.
+
 ## Try it
 
 From the Sharp folder, using Python 3.12 or newer:
@@ -243,7 +247,7 @@ python -m pip install -e ".[mcp]"
 sharp mcp --root path/to/your/career-workspace
 ```
 
-Configure that command as a stdio MCP server in your agent. Start with `contracts_describe` for an index, then request only the contracts needed. The server can initialize a workspace, extract material, inspect/propose/apply career revisions, record explicit user assessments, create/edit/export documents, and manage/share settings and functions. File operations are scoped to its configured workspace. Customization runtime restrictions apply separately from MCP's trusted local file tools.
+See [complete Codex and Claude Code registration commands](docs/SETUP.md#3-register-the-stdio-server-with-the-current-agent). Configure that command as a stdio MCP server in your agent. Start with `contracts_describe` for an index, then request only the contracts needed. The server can initialize a workspace, extract material, inspect/propose/apply career revisions, record explicit user assessments, create/edit/export documents, and manage/share settings and functions. File operations are scoped to its configured workspace. Customization runtime restrictions apply separately from MCP's trusted local file tools.
 
 The three [skills](skills/) explain career import/update, resume creation, and cover-letter creation. They are deliberately short. Your agent can create both documents by invoking the two document workflows; there is no separate pair framework.
 

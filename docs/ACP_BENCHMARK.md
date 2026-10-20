@@ -46,4 +46,4 @@ The restricted parent environment initially prevented Codex from initializing it
 
 The two-second end-to-end target was not achieved through a fresh installed-agent process. Provider startup and inference dominate. Reusing a warm ACP connection could remove some startup overhead but was not implemented or benchmarked here. Do not advertise local-only timings as AI-inclusive latency.
 
-The complete report, chosen IDs, PDF, previews and snapshots are under ignored outputs/acp-live-verified. The earlier run is retained under outputs/acp-live. Reproduce using scripts/benchmark_acp.py and explicit paths to the adapter and existing Codex binary.
+These measurements came from local ignored outputs/acp-live-verified and outputs/acp-live runs. Those generated folders are not shipped and were removed during output cleanup. Reproduce a new run using scripts/benchmark_acp.py and explicit paths to the adapter and existing Codex binary; do not expect the historical output paths to exist.
