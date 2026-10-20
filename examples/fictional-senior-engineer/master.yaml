@@ -1,8 +1,15 @@
 basics:
-  name: Morgan Ellis
-  label: Senior Software Engineer | FICTIONAL BENCHMARK
-  email: morgan.ellis@example.com
-  url: https://example.com/morgan-ellis
+  name: Alex Rowan
+  label: Senior Software Engineer
+  email: alex.rowan@outlook.com
+  url: https://alexrowan.dev
+  profiles:
+  - network: LinkedIn
+    url: https://www.linkedin.com/in/alex-rowan
+  - network: GitHub
+    url: https://github.com/alexrowan
+  - network: Portfolio
+    url: https://alexrowan.dev
 work:
 - x_id: harbor
   name: Harborline Commerce
@@ -53,10 +60,23 @@ projects:
 - x_id: recipe_app
   name: Recipe planning app
 education:
-- institution: Lakeview Institute of Technology (fictional)
+- institution: Westbridge University
+  studyType: M.S.
+  area: Software Engineering
+  startDate: '2019'
+  endDate: '2022'
+  courses:
+  - Distributed Systems
+  - Software Architecture
+  - Database Systems
+- institution: Lakeview Institute of Technology
   studyType: B.S.
   area: Computer Science
   endDate: '2017'
+  courses:
+  - Data Structures and Algorithms
+  - Operating Systems
+  - Computer Networks
 volunteer: []
 certificates: []
 awards: []

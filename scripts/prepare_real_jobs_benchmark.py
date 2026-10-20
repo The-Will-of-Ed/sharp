@@ -440,19 +440,31 @@ def profile():
     career = Career.model_validate(
         dict(
             basics=dict(
-                name="Morgan Ellis",
-                label="Senior Software Engineer | FICTIONAL BENCHMARK",
-                email="morgan.ellis@example.com",
-                url="https://example.com/morgan-ellis",
+                name="Alex Rowan",
+                label="Senior Software Engineer",
+                email="alex.rowan@outlook.com",
+                url="https://alexrowan.dev",
+                profiles=[dict(network="LinkedIn", url="https://www.linkedin.com/in/alex-rowan"),
+                          dict(network="GitHub", url="https://github.com/alexrowan"),
+                          dict(network="Portfolio", url="https://alexrowan.dev")],
             ),
             work=work_records,
             projects=projects,
             education=[
                 dict(
-                    institution="Lakeview Institute of Technology (fictional)",
+                    institution="Westbridge University",
+                    studyType="M.S.",
+                    area="Software Engineering",
+                    startDate="2019",
+                    endDate="2022",
+                    courses=["Distributed Systems", "Software Architecture", "Database Systems"],
+                ),
+                dict(
+                    institution="Lakeview Institute of Technology",
                     studyType="B.S.",
                     area="Computer Science",
                     endDate="2017",
+                    courses=["Data Structures and Algorithms", "Operating Systems", "Computer Networks"],
                 )
             ],
             x_resume=dict(
@@ -491,7 +503,7 @@ def profile():
         fixture / "inventory.json",
         dict(
             disclosure="Entirely fictional candidate and accomplishments; real job postings. IBM employment is also fictional.",
-            candidate="Morgan Ellis",
+            candidate="Alex Rowan",
             years=9,
             employers=4,
             work_bullets=sum(map(len, groups.values())),
