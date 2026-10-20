@@ -157,6 +157,12 @@ class TextRun(Record):
     style: dict[str, Any] = Field(default_factory=dict)
 
 
+class LinkSpan(Record):
+    start: int = Field(ge=0)
+    end: int = Field(gt=0)
+    url: str
+
+
 class Block(Record):
     id: str
     kind: str
@@ -165,6 +171,13 @@ class Block(Record):
     runs: list[TextRun] = Field(default_factory=list)
     source_ids: list[str] = Field(default_factory=list)
     url: str | None = None
+    links: list[LinkSpan] = Field(default_factory=list)
+
+    @model_validator(mode="after")
+    def valid_links(self):
+        if any(not 0 <= link.start < link.end <= len(self.text) for link in self.links):
+            raise ValueError("Link range outside block text")
+        return self
 
 
 class Page(Record):
@@ -222,6 +235,7 @@ class Settings(Record):
     section_order: list[str] = Field(
         default_factory=lambda: ["summary", "work", "projects", "education", "skills"]
     )
+    profile_separator: str = "\n"
     experience_first: bool = True
     constraints: Constraints = Field(default_factory=Constraints)
     skills_fill_target: float = Field(default=0.95, ge=0, le=1)

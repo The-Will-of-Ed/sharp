@@ -67,12 +67,14 @@ def segments(block, start, end):
     current, begin = None, start
     for i in range(start, end):
         style = style_at(block, i)
-        if current is not None and style != current:
-            yield block.text[begin:i], current
+        url = next((link.url for link in block.links if link.start <= i < link.end), block.url)
+        effective = style, url
+        if current is not None and effective != current:
+            yield block.text[begin:i], *current
             begin = i
-        current = style
+        current = effective
     if current is not None:
-        yield block.text[begin:end], current
+        yield block.text[begin:end], *current
 
 
 @lru_cache(maxsize=4096)
@@ -206,26 +208,20 @@ class PdfRenderer:
                 for i, line in enumerate(m.lines):
                     x = placed.x
                     baseline = page.height - placed.y - leading * i - leading * 0.8
-                    for text, style in segments(b, line.start, line.end):
+                    for text, style, url in segments(b, line.start, line.end):
                         canvas.setFillColor(HexColor(style.color))
                         text_obj = canvas.beginText(x, baseline)
                         name = font_name(style)
                         text_obj.setFont(name, style.size)
                         text_obj.textOut(text)
                         canvas.drawText(text_obj)
-                        x += pdfmetrics.stringWidth(text, name, style.size)
+                        width = pdfmetrics.stringWidth(text, name, style.size)
+                        if url:
+                            canvas.linkURL(
+                                url, (x, baseline, x + width, baseline + style.size), relative=0
+                            )
+                        x += width
                 canvas.addLiteral("EMC")
-                if b.url:
-                    canvas.linkURL(
-                        b.url,
-                        (
-                            placed.x,
-                            page.height - placed.y - m.height,
-                            placed.x + placed.width,
-                            page.height - placed.y,
-                        ),
-                        relative=0,
-                    )
             canvas.showPage()
         canvas.save()
         tags.attach(path)

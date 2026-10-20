@@ -148,6 +148,8 @@ Credentials stay in environment variables, not career/settings files. Gateway in
 
 For installed agents, install the agents extra and configure `kind: acp`, `command`, `args`, and `cwd`. Use the maintained `@agentclientprotocol/codex-acp` or `@agentclientprotocol/claude-agent-acp` adapter, not terminal-output parsing. Agent startup and inference are outside Sharp's local-render budget. Existing subscriptions remain subject to their own availability and limits.
 
+Profile links default to separate lines. Set `profile_separator: " | "` in local settings to place them together with natural wrapping; spaces, tabs, or another separator also work. Tabs expand to spaces. Each URL keeps its own click target in PDF, DOCX, and PPTX. Set it to `"\n"` to restore separate lines. This also works through `settings_update`.
+
 ## Change things directly or through your agent
 
 There are two user-owned files:

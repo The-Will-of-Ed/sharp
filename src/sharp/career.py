@@ -179,10 +179,19 @@ def prepare_document(career: Career, settings: Settings, plan: ChoicePlan) -> li
     )
     if contact:
         add("contact", "contact", contact, "contact")
-    for i, profile in enumerate(basics.get("profiles", [])):
-        url = profile.get("url", "")
-        if url:
+    profiles = [(i, p["url"]) for i, p in enumerate(basics.get("profiles", [])) if p.get("url")]
+    if settings.profile_separator == "\n":
+        for i, url in profiles:
             add(f"profile:{i}", "contact", url, "contact", url=url)
+    elif profiles:
+        from .contracts import LinkSpan
+
+        separator = settings.profile_separator.expandtabs()
+        add("profiles", "contact", separator.join(url for _, url in profiles), "contact")
+        offset = 0
+        for _, url in profiles:
+            doc[-1].links.append(LinkSpan(start=offset, end=offset + len(url), url=url))
+            offset += len(url) + len(separator)
     ranked = {d.candidate_id: i for i, d in enumerate(plan.ranked)}
     # A complete approved pool lets before-layout rules require an unranked point.
     # fit() still admits only ranked candidates and explicit supporting requirements.

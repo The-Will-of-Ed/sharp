@@ -62,7 +62,7 @@ class OfficeExporter:
                     paragraph.space_before = paragraph.space_after = Pt(0)
                     if offset:
                         pptx_list(paragraph, p.block.style)
-                    for text, style in segments(p.block, line.start, line.end):
+                    for text, style, url in segments(p.block, line.start, line.end):
                         run = paragraph.add_run()
                         run.text = text
                         run.font.name = {
@@ -76,8 +76,8 @@ class OfficeExporter:
                             style.italic,
                         )
                         run.font.color.rgb = RGBColor.from_string(style.color[1:])
-                        if p.block.url:
-                            run.hyperlink.address = p.block.url
+                        if url:
+                            run.hyperlink.address = url
         prs.save(destination)
 
     def _docx(self, layout, settings, destination):
@@ -118,7 +118,7 @@ class OfficeExporter:
                 "heading",
                 "owner",
             )
-            for text, style in segments(p.block, 0, len(p.block.text)):
+            for text, style, url in segments(p.block, 0, len(p.block.text)):
                 run = paragraph.add_run(text)
                 run.bold, run.italic = style.bold, style.italic
                 run.font.name = {
@@ -130,13 +130,13 @@ class OfficeExporter:
                     Pt(style.size),
                     RGBColor.from_string(style.color[1:]),
                 )
-                if p.block.url:
+                if url:
                     from docx.opc.constants import RELATIONSHIP_TYPE
                     from docx.oxml import OxmlElement
                     from docx.oxml.ns import qn
 
                     relation = paragraph.part.relate_to(
-                        p.block.url, RELATIONSHIP_TYPE.HYPERLINK, is_external=True
+                        url, RELATIONSHIP_TYPE.HYPERLINK, is_external=True
                     )
                     hyperlink = OxmlElement("w:hyperlink")
                     hyperlink.set(qn("r:id"), relation)

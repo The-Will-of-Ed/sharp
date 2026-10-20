@@ -82,6 +82,8 @@ MEANINGS = {
     "styles": "Default semantic styles; local settings are complete, not merged with hidden templates.",
     "exceptions": "Per-block style overrides keyed by stable ID; global edits preserve them unless explicitly cleared.",
     "section_order": "Display order for supported summary/work/projects/education/skills sections.",
+    "profile_separator": "Separator between profile URLs: newline preserves individual blocks; any other text groups links with natural wrapping. Tabs expand to spaces. Each URL stays independently clickable.",
+    "links": "Inline link ranges with independent destinations; offsets refer to block text and survive wrapping.",
     "experience_first": "Editable inclusion preference. True ships by default; display order is still independent.",
     "skills_fill_target": "Desired final skills-line width fraction; no artificial spacing or unsupported filler.",
     "skills_max_lines": "Maximum skill lines; only ranked supported skills are considered.",

@@ -114,6 +114,9 @@ section_order:
 - projects
 - education
 - skills
+profile_separator: '
+
+  '
 experience_first: true
 constraints:
   required: []

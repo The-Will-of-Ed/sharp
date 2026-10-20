@@ -128,6 +128,14 @@ All offsets are Unicode code points. All geometry is in points from the top-left
 | `end` | integer | yes | Exclusive Unicode code-point offset; changes to text require range review. |
 | `style` | object | no; see schema default | Effective style or range patch; validate supported properties before applying. |
 
+## LinkSpan
+
+| Field | Type | Required | Meaning and why |
+|---|---|---|---|
+| `start` | integer | yes | Inclusive Unicode code-point offset into snapshot text; not a UTF-16 or byte index. |
+| `end` | integer | yes | Exclusive Unicode code-point offset; changes to text require range review. |
+| `url` | string | yes | Actual link destination; exporters retain link relationships. |
+
 ## Block
 
 | Field | Type | Required | Meaning and why |
@@ -139,6 +147,7 @@ All offsets are Unicode code points. All geometry is in points from the top-left
 | `runs` | TextRun[] | no; see schema default | Snapshot-specific text ranges and style patches; later ranges win for overlapping properties. |
 | `source_ids` | string[] | no; see schema default | Stable source references for provenance of rendered content. |
 | `url` | string or null | no; see schema default | Actual link destination; exporters retain link relationships. |
+| `links` | LinkSpan[] | no; see schema default | Inline link ranges with independent destinations; offsets refer to block text and survive wrapping. |
 
 ## Page
 
@@ -180,6 +189,7 @@ All offsets are Unicode code points. All geometry is in points from the top-left
 | `styles` | object | no; see schema default | Default semantic styles; local settings are complete, not merged with hidden templates. |
 | `exceptions` | object | no; see schema default | Per-block style overrides keyed by stable ID; global edits preserve them unless explicitly cleared. |
 | `section_order` | string[] | no; see schema default | Display order for supported summary/work/projects/education/skills sections. |
+| `profile_separator` | string | no; see schema default | Separator between profile URLs: newline preserves individual blocks; any other text groups links with natural wrapping. Tabs expand to spaces. Each URL stays independently clickable. |
 | `experience_first` | boolean | no; see schema default | Editable inclusion preference. True ships by default; display order is still independent. |
 | `constraints` | Constraints | no; see schema default | Explicit content requirements; contradictory mandatory requests fail rather than silently relaxing. |
 | `skills_fill_target` | number | no; see schema default | Desired final skills-line width fraction; no artificial spacing or unsupported filler. |

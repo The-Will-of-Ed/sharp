@@ -1,6 +1,6 @@
 # Validation
 
-Validated locally on Windows with Python 3.14.3. The complete suite passes 78 tests when the custom-rule compiler/runtime prerequisites are configured. Configured Linux/Windows CI is not a claim that every hosted CI run has already completed.
+Validated locally on Windows with Python 3.14.3. The complete suite passes 89 tests when the custom-rule compiler/runtime prerequisites are configured. Configured Linux/Windows CI is not a claim that every hosted CI run has already completed.
 
 ## Functional checks
 
@@ -9,6 +9,7 @@ Validated locally on Windows with Python 3.14.3. The complete suite passes 78 te
 - Multiple PDF/DOCX source folders through CLI and MCP extraction, a reviewed consolidated master saved through `career_replace`, rejection of stale revisions and PDF generation with a supplied selection plan. The agent supplies consolidation; extraction is not credited with semantic deduplication.
 - Confidence neutrality and reassessment, evidence/approval references, protected qualifiers, required/supporting/excluded points, relevance ranking versus display order, settings changes and per-item exceptions.
 - Single/two-page fitting, selectable PDF text, links, reading order, margin geometry, hanging bullet markers, PDF list tags, and two-page MCID/parent-tree resolution.
+- Configurable profile separators, empty links, invalid inline ranges, and independently clickable destinations across wrapped PDF/DOCX/PPTX text.
 - Optional editable DOCX/PPTX exports, cover-letter requests, preservation of successful output after a failed edit, and no repeated selection for formatting-only edits.
 - Real restricted-runtime checks for file/network attempts, deadlines, output limits, fresh state and cached execution without locating a compiler.
 - Portable sample-gallery links and all 30 resume/posting/selection sets.

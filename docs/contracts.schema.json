@@ -1834,8 +1834,66 @@
     "title": "TextRun",
     "type": "object"
   },
+  "LinkSpan": {
+    "additionalProperties": false,
+    "properties": {
+      "start": {
+        "minimum": 0,
+        "title": "Start",
+        "type": "integer",
+        "description": "Inclusive Unicode code-point offset into snapshot text; not a UTF-16 or byte index."
+      },
+      "end": {
+        "exclusiveMinimum": 0,
+        "title": "End",
+        "type": "integer",
+        "description": "Exclusive Unicode code-point offset; changes to text require range review."
+      },
+      "url": {
+        "title": "Url",
+        "type": "string",
+        "description": "Actual link destination; exporters retain link relationships."
+      }
+    },
+    "required": [
+      "start",
+      "end",
+      "url"
+    ],
+    "title": "LinkSpan",
+    "type": "object"
+  },
   "Block": {
     "$defs": {
+      "LinkSpan": {
+        "additionalProperties": false,
+        "properties": {
+          "start": {
+            "minimum": 0,
+            "title": "Start",
+            "type": "integer",
+            "description": "Inclusive Unicode code-point offset into snapshot text; not a UTF-16 or byte index."
+          },
+          "end": {
+            "exclusiveMinimum": 0,
+            "title": "End",
+            "type": "integer",
+            "description": "Exclusive Unicode code-point offset; changes to text require range review."
+          },
+          "url": {
+            "title": "Url",
+            "type": "string",
+            "description": "Actual link destination; exporters retain link relationships."
+          }
+        },
+        "required": [
+          "start",
+          "end",
+          "url"
+        ],
+        "title": "LinkSpan",
+        "type": "object"
+      },
       "Style": {
         "additionalProperties": false,
         "properties": {
@@ -1996,6 +2054,13 @@
         "default": null,
         "title": "Url",
         "description": "Actual link destination; exporters retain link relationships."
+      },
+      "links": {
+        "items": {
+          "$ref": "#/$defs/LinkSpan"
+        },
+        "title": "Links",
+        "type": "array"
       }
     },
     "required": [
@@ -2423,6 +2488,11 @@
         "title": "Section Order",
         "type": "array",
         "description": "Display order for supported summary/work/projects/education/skills sections."
+      },
+      "profile_separator": {
+        "default": "\n",
+        "title": "Profile Separator",
+        "type": "string"
       },
       "experience_first": {
         "default": true,
@@ -4025,6 +4095,13 @@
             "default": null,
             "title": "Url",
             "description": "Actual link destination; exporters retain link relationships."
+          },
+          "links": {
+            "items": {
+              "$ref": "#/$defs/LinkSpan"
+            },
+            "title": "Links",
+            "type": "array"
           }
         },
         "required": [
@@ -4072,6 +4149,35 @@
           "available_width"
         ],
         "title": "Line",
+        "type": "object"
+      },
+      "LinkSpan": {
+        "additionalProperties": false,
+        "properties": {
+          "start": {
+            "minimum": 0,
+            "title": "Start",
+            "type": "integer",
+            "description": "Inclusive Unicode code-point offset into snapshot text; not a UTF-16 or byte index."
+          },
+          "end": {
+            "exclusiveMinimum": 0,
+            "title": "End",
+            "type": "integer",
+            "description": "Exclusive Unicode code-point offset; changes to text require range review."
+          },
+          "url": {
+            "title": "Url",
+            "type": "string",
+            "description": "Actual link destination; exporters retain link relationships."
+          }
+        },
+        "required": [
+          "start",
+          "end",
+          "url"
+        ],
+        "title": "LinkSpan",
         "type": "object"
       },
       "Measurement": {
@@ -4315,6 +4421,13 @@
             "default": null,
             "title": "Url",
             "description": "Actual link destination; exporters retain link relationships."
+          },
+          "links": {
+            "items": {
+              "$ref": "#/$defs/LinkSpan"
+            },
+            "title": "Links",
+            "type": "array"
           }
         },
         "required": [
@@ -4362,6 +4475,35 @@
           "available_width"
         ],
         "title": "Line",
+        "type": "object"
+      },
+      "LinkSpan": {
+        "additionalProperties": false,
+        "properties": {
+          "start": {
+            "minimum": 0,
+            "title": "Start",
+            "type": "integer",
+            "description": "Inclusive Unicode code-point offset into snapshot text; not a UTF-16 or byte index."
+          },
+          "end": {
+            "exclusiveMinimum": 0,
+            "title": "End",
+            "type": "integer",
+            "description": "Exclusive Unicode code-point offset; changes to text require range review."
+          },
+          "url": {
+            "title": "Url",
+            "type": "string",
+            "description": "Actual link destination; exporters retain link relationships."
+          }
+        },
+        "required": [
+          "start",
+          "end",
+          "url"
+        ],
+        "title": "LinkSpan",
         "type": "object"
       },
       "Measurement": {
@@ -5856,6 +5998,13 @@
             "default": null,
             "title": "Url",
             "description": "Actual link destination; exporters retain link relationships."
+          },
+          "links": {
+            "items": {
+              "$ref": "#/$defs/LinkSpan"
+            },
+            "title": "Links",
+            "type": "array"
           }
         },
         "required": [
@@ -6794,6 +6943,35 @@
         "title": "Line",
         "type": "object"
       },
+      "LinkSpan": {
+        "additionalProperties": false,
+        "properties": {
+          "start": {
+            "minimum": 0,
+            "title": "Start",
+            "type": "integer",
+            "description": "Inclusive Unicode code-point offset into snapshot text; not a UTF-16 or byte index."
+          },
+          "end": {
+            "exclusiveMinimum": 0,
+            "title": "End",
+            "type": "integer",
+            "description": "Exclusive Unicode code-point offset; changes to text require range review."
+          },
+          "url": {
+            "title": "Url",
+            "type": "string",
+            "description": "Actual link destination; exporters retain link relationships."
+          }
+        },
+        "required": [
+          "start",
+          "end",
+          "url"
+        ],
+        "title": "LinkSpan",
+        "type": "object"
+      },
       "Measurement": {
         "additionalProperties": false,
         "properties": {
@@ -6917,6 +7095,11 @@
             "title": "Section Order",
             "type": "array",
             "description": "Display order for supported summary/work/projects/education/skills sections."
+          },
+          "profile_separator": {
+            "default": "\n",
+            "title": "Profile Separator",
+            "type": "string"
           },
           "experience_first": {
             "default": true,
@@ -7289,6 +7472,13 @@
             "default": null,
             "title": "Url",
             "description": "Actual link destination; exporters retain link relationships."
+          },
+          "links": {
+            "items": {
+              "$ref": "#/$defs/LinkSpan"
+            },
+            "title": "Links",
+            "type": "array"
           }
         },
         "required": [
@@ -8306,6 +8496,35 @@
         "title": "Line",
         "type": "object"
       },
+      "LinkSpan": {
+        "additionalProperties": false,
+        "properties": {
+          "start": {
+            "minimum": 0,
+            "title": "Start",
+            "type": "integer",
+            "description": "Inclusive Unicode code-point offset into snapshot text; not a UTF-16 or byte index."
+          },
+          "end": {
+            "exclusiveMinimum": 0,
+            "title": "End",
+            "type": "integer",
+            "description": "Exclusive Unicode code-point offset; changes to text require range review."
+          },
+          "url": {
+            "title": "Url",
+            "type": "string",
+            "description": "Actual link destination; exporters retain link relationships."
+          }
+        },
+        "required": [
+          "start",
+          "end",
+          "url"
+        ],
+        "title": "LinkSpan",
+        "type": "object"
+      },
       "Measurement": {
         "additionalProperties": false,
         "properties": {
@@ -8472,6 +8691,11 @@
             "title": "Section Order",
             "type": "array",
             "description": "Display order for supported summary/work/projects/education/skills sections."
+          },
+          "profile_separator": {
+            "default": "\n",
+            "title": "Profile Separator",
+            "type": "string"
           },
           "experience_first": {
             "default": true,
@@ -10015,6 +10239,13 @@
             "default": null,
             "title": "Url",
             "description": "Actual link destination; exporters retain link relationships."
+          },
+          "links": {
+            "items": {
+              "$ref": "#/$defs/LinkSpan"
+            },
+            "title": "Links",
+            "type": "array"
           }
         },
         "required": [
@@ -10141,6 +10372,35 @@
           "available_width"
         ],
         "title": "Line",
+        "type": "object"
+      },
+      "LinkSpan": {
+        "additionalProperties": false,
+        "properties": {
+          "start": {
+            "minimum": 0,
+            "title": "Start",
+            "type": "integer",
+            "description": "Inclusive Unicode code-point offset into snapshot text; not a UTF-16 or byte index."
+          },
+          "end": {
+            "exclusiveMinimum": 0,
+            "title": "End",
+            "type": "integer",
+            "description": "Exclusive Unicode code-point offset; changes to text require range review."
+          },
+          "url": {
+            "title": "Url",
+            "type": "string",
+            "description": "Actual link destination; exporters retain link relationships."
+          }
+        },
+        "required": [
+          "start",
+          "end",
+          "url"
+        ],
+        "title": "LinkSpan",
         "type": "object"
       },
       "Measurement": {
