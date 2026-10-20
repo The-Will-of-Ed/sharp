@@ -1,4 +1,4 @@
-﻿# Set up Sharp with your existing agent
+# Set up Sharp with your existing agent
 
 Open this repository in Codex or Claude Code and say:
 
@@ -108,7 +108,7 @@ Use these MCP operations:
 4. The current agent reconciles sources and user context, consolidates duplicate claims, preserves stable IDs and qualifiers, and prepares a complete proposed Career. It does not invent confidence assessments or silently approve facts.
 5. Show the proposal for review. After the user approves, `career_replace(career_path="master.yaml", proposed_career=..., expected_hash=...)` validates and saves the complete master. If the revision changed, inspect and review again. Later wording-only updates can use `career_propose` and `career_apply`.
 
-Supported readers: PDF, DOCX, PPTX, text, Markdown, YAML, and JSON. Scanned/image-only PDFs need OCR or visual reading by the current agent; Sharp has no built-in OCR. Corrupt/password-protected documents may need user intervention. Extraction preserves source paths and hashes, plus page/slide attribution where supported. It is text extraction, not proof that a claim is independently verified.
+Supported readers: PDF, DOCX, PPTX, text, Markdown, YAML, and JSON. For scanned/image-only PDFs, the current agent reads the page images directly using its PDF/image capabilities. The skill combines that reading with user context and extracted text where useful; an empty text layer is not a reason to reject a resume. If the host cannot display PDF pages, obtain page images or an OCR copy. Sharp's optional text reader does not itself perform OCR. Corrupt/password-protected documents may need user intervention. Extraction preserves source paths and hashes, plus page/slide attribution where supported. It is text extraction, not proof that a claim is independently verified.
 
 CLI extraction is also available. For example, from the repository root on Windows:
 
@@ -139,6 +139,6 @@ For a cover letter, read `skills/sharp-cover-letter/SKILL.md` and supply reviewe
 
 ## Completion check
 
-Setup is complete only after the agent can discover Sharp's MCP tools and initialize/inspect its private workspace. Before claiming the user's career is ready, review and validate the imported master. Before delivering a resume, actually create it, inspect its warnings and PDF, and report the path. Existing fill targets, supported section/layout limits and scanned-PDF limitations still apply; installation does not remove them.
+Setup is complete only after the agent can discover Sharp's MCP tools and initialize/inspect its private workspace. Before claiming the user's career is ready, review and validate the imported master. Before delivering a resume, actually create it, inspect its warnings and PDF, and report the path. Review fill targets and supported sections/layouts, and confirm that any scanned pages were actually inspected by the agent.
 
 The automated integration test covers multiple PDF/DOCX folders, real stdio MCP extraction, reviewed master replacement, and PDF generation with a supplied choice plan. It tests the plumbing, not the quality of an arbitrary agent's interpretation of a person's career.

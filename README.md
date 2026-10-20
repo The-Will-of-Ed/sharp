@@ -26,14 +26,6 @@ The demo uses clearly fictional career data. It needs no AI, API key, Office ins
 
 Sharp is an independent Python project with its own `.venv`. `uv.lock` pins its dependencies. With uv installed, run `uv sync --extra test --extra preview --extra office --extra mcp --extra agents --extra rules` from this folder to recreate development dependencies. Use this folder's `.venv/Scripts/python.exe`; no parent project is required. The development interpreter is pinned in `.python-version`; the package supports Python 3.12 and newer.
 
-Real AI-inclusive execution has now been verified through Codex ACP 2.2.2 with the existing ChatGPT login and existing Codex executable. The reported model was gpt-6-sol, reasoning medium. The run took 12.35 seconds including startup and inference. See [the actual benchmark](docs/ACP_BENCHMARK.md). Rerun using:
-
-```text
-.venv\Scripts\python.exe scripts/benchmark_acp.py --adapter path/to/codex-acp/dist/index.js --codex path/to/existing/codex.exe --output outputs/acp-live
-```
-
-No CLI installation or update is performed by this script. The usual npm ACP package depends on Codex CLI; the tested local installation unpacked the adapter separately, installed only its other runtime dependencies, and pointed CODEX_PATH at the existing executable. That installation is under ignored `.cache/acp`.
-
 For your own material:
 
 ```text
@@ -72,7 +64,7 @@ Job text or URL ---------+-------------+----------------+
                            PPTX / DOCX only if requested
 ```
 
-See [the visual architecture](docs/architecture.svg), [its PNG](docs/architecture.png), [every contract field with its meaning](docs/CONTRACTS.md), and [the validation record](docs/VALIDATION.md).
+See [the visual architecture](docs/architecture.svg), [its PNG](docs/architecture.png), [every contract field with its meaning](docs/CONTRACTS.md), and [current validation checks](docs/VALIDATION.md).
 
 ## What exists by default
 
@@ -264,14 +256,6 @@ Set `SHARP_RULE_COMPILER` to the installed compiler and put Binaryen's executabl
 
 Contracts and functionality tests come first. Keep core career/selection/layout independent of vendors; `workflow.py` is outer file/run orchestration and `service.py` composes adapters. No imports from the old resume applications. Tests must not be weakened to accommodate broken implementation.
 
-Benchmarks report local work separately from inference. The final 80-candidate benchmark on the implementation machine measured:
-
-| Local operation | One page | Two pages |
-|---|---:|---:|
-| Cold CLI generation | 1.73 s | 1.85 s |
-| Warm PDF generation, median of five | 0.78 s | 1.01 s |
-| Warm formatting edit, median of five | 0.62 s | 0.81 s |
-
-These include fitting, export, previews and checks. They exclude model inference. They are measurements, not cross-machine or model-latency guarantees. The benchmark script saves actual results under ignored outputs, alongside an explicitly assumed 30-minute manual baseline; that baseline is not a measured like-for-like quality comparison.
+Run `scripts/benchmark.py` to measure local fitting, generation and edits on your machine. Local measurements exclude model inference; report those stages separately.
 
 Sharp's software is open source. Your master, settings, evidence, credentials, run folders, and caches are local and ignored. Review a portable settings copy before sharing: custom source and comments are user-authored text and can themselves contain private information.
