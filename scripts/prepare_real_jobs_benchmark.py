@@ -466,13 +466,15 @@ def profile():
     career = Career.model_validate(
         dict(
             basics=dict(
-                name="Alex Rowan",
+                name="Roran StrongHammer",
                 label="Senior Software Engineer",
-                email="alex.rowan@outlook.com",
-                url="https://alexrowan.dev",
-                profiles=[dict(network="LinkedIn", url="https://www.linkedin.com/in/alex-rowan"),
-                          dict(network="GitHub", url="https://github.com/alexrowan"),
-                          dict(network="Portfolio", url="https://alexrowan.dev")],
+                email="roran.stronghammer@outlook.com",
+                phone="+1 (206) 555-0147",
+                location=dict(city="Seattle", region="Washington", countryCode="US"),
+                url="https://roranstronghammer.dev",
+                profiles=[dict(network="LinkedIn", url="https://www.linkedin.com/in/roran-stronghammer"),
+                          dict(network="GitHub", url="https://github.com/roranstronghammer"),
+                          dict(network="Portfolio", url="https://roranstronghammer.dev")],
             ),
             work=work_records,
             projects=projects,
@@ -529,7 +531,7 @@ def profile():
         fixture / "inventory.json",
         dict(
             disclosure="Entirely fictional candidate and accomplishments; real job postings. IBM employment is also fictional.",
-            candidate="Alex Rowan",
+            candidate="Roran StrongHammer",
             years=9,
             employers=len(work),
             work_bullets=sum(map(len, groups.values())),
