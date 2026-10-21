@@ -26,7 +26,7 @@ sharp = "sharp.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-sharp = ["defaults/*.yaml", "defaults/*.json", "defaults/*.txt"]
+sharp = ["defaults/*.yaml", "defaults/*.json", "defaults/*.txt", "skills/**/*.md"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

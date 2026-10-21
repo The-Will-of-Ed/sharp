@@ -269,3 +269,7 @@ Contracts and functionality tests come first. Keep core career/selection/layout 
 Run `scripts/benchmark.py` to measure local fitting, generation and edits on your machine. Local measurements exclude model inference; report those stages separately.
 
 Sharp's software is open source. Your master, settings, evidence, credentials, run folders, and caches are local and ignored. Review a portable settings copy before sharing: custom source and comments are user-authored text and can themselves contain private information.
+
+## Shared selection skill
+
+The host agent, ACP selector, and gateway chat selector use `skills/sharp-resume-create/SKILL.md` as the shared resume guidance. Editable installs read it directly; distribution builds bundle that same file. Provider code adds only selection-only execution instructions, the output schema, and supplied context. User selection settings remain in the local settings file. Decision scorers remain typed scoring adapters rather than prose-generating agents.
