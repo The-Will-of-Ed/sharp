@@ -234,13 +234,15 @@ def prepare_document(career: Career, settings: Settings, plan: ChoicePlan) -> li
                     str(v) for v in (o.get("name") or o.get("organization"), o.get("position")) if v
                 )
                 dates = " - ".join(str(o[k]) for k in ("startDate", "endDate") if o.get(k))
-                add(
-                    f"owner:{owner}",
-                    "owner",
-                    title + (f" | {dates}" if dates else ""),
-                    "owner",
-                    [owner],
-                )
+                heading = (title + (f" | {dates}" if dates else "")).strip()
+                if heading:
+                    add(
+                        f"owner:{owner}",
+                        "owner",
+                        heading,
+                        "owner",
+                        [owner],
+                    )
                 for b in sorted(bs, key=lambda b: ranked.get(b.id, -1)):
                     text = next(
                         (v.text for v in b.variants if v.id == variant.get(b.id)),
