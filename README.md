@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/SHARP-FULL-SIGNATURE.svg" alt="Sharp" width="560">
+  <img src="assets/SHARP-FULL-SIGNATURE-WHITE.svg" alt="Sharp" width="560">
 </p>
 
 # Show every employer why you're right for their job.
